@@ -1,4 +1,5 @@
 import { Anchor } from '@storybook/addon-docs';
+import * as ComponentStories from './modus-button-group.stories';
 
 # Button Group
 
@@ -19,7 +20,7 @@ For Icon only Buttons,
 - Outline buttons only support `primary` and `secondary` colors.
 - Borderless buttons supports all the given colors except `danger`.
 
-<Anchor storyId="components-button-group--default" />
+<Anchor of={ComponentStories.Default} />
 
 ## Default
 
@@ -37,7 +38,7 @@ For Icon only Buttons,
 </modus-button-group>
 ```
 
-<Anchor storyId="components-button-group--single-selection" />
+<Anchor of={ComponentStories.SingleSelection} />
 
 ## Single Selection
 
@@ -55,7 +56,7 @@ For Icon only Buttons,
 </modus-button-group>
 ```
 
-<Anchor storyId="components-button-group--multiple-selection" />
+<Anchor of={ComponentStories.MultipleSelection} />
 
 ## Multiple Selection
 

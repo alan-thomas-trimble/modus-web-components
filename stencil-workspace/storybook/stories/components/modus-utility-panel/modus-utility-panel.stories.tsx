@@ -1,5 +1,5 @@
 import docs from './modus-utility-panel-storybook-docs.mdx';
-import { html } from 'lit-html';
+import { html } from 'lit';
 import { useEffect } from '@storybook/client-api';
 
 export default {

@@ -1,5 +1,5 @@
 // @ts-ignore: JSX/MDX with Stencil
-import { html } from 'lit-html';
+import { html } from 'lit';
 import docs from './modus-tabs-storybook-docs.mdx';
 
 export default {

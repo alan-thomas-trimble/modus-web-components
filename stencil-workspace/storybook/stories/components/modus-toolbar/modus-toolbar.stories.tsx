@@ -1,4 +1,4 @@
-import { html } from 'lit-html';
+import { html } from 'lit';
 import docs from './modus-toolbar-storybook-docs.mdx';
 
 export default {

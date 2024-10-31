@@ -1,4 +1,4 @@
-import { html } from 'lit-html';
+import { html } from 'lit';
 // @ts-ignore: JSX/MDX with Stencil
 import docs from './modus-switch-storybook-docs.mdx';
 
@@ -70,6 +70,21 @@ export const Medium = {
     disabled: false,
     label: 'Medium',
     size: 'medium',
+  },
+};
+
+export const Small = {
+  render: ({ ariaLabel, checked, disabled, label, size }) => html`
+    <modus-switch aria-label=${ariaLabel} checked=${checked} ?disabled=${disabled} label=${label} size=${size}>
+    </modus-switch>
+  `,
+
+  args: {
+    ariaLabel: '',
+    checked: false,
+    disabled: false,
+    label: 'Small',
+    size: 'small',
   },
 };
 

@@ -1,4 +1,5 @@
 import { Anchor } from '@storybook/addon-docs';
+import * as ComponentStories from './modus-badge.stories';
 
 # Badge
 
@@ -7,7 +8,7 @@ import { Anchor } from '@storybook/addon-docs';
 [Modus Badge](https://modus.trimble.com/components/badges/) web components provide non-interactive labels for displaying small amounts of information. They are referenced using the `<modus-badge>` custom HTML element.
 This component utilizes the slot element, allowing you to render your own HTML in the badge.
 
-<Anchor storyId="components-badge--default" />
+<Anchor of={ComponentStories.Default} />
 
 ### Default
 
@@ -23,7 +24,7 @@ This component utilizes the slot element, allowing you to render your own HTML i
 <modus-badge size="medium">Medium</modus-badge>
 <modus-badge size="large">Large</modus-badge>
 
-<Anchor storyId="components-badge--counter" />
+<Anchor of={ComponentStories.Counter} />
 
 ### Counter
 
@@ -39,7 +40,7 @@ This component utilizes the slot element, allowing you to render your own HTML i
 <modus-badge size="medium" type="counter">md</modus-badge>
 <modus-badge size="large" type="counter">lg</modus-badge>
 
-<Anchor storyId="components-badge--text" />
+<Anchor of={ComponentStories.Text} />
 
 ### Text
 

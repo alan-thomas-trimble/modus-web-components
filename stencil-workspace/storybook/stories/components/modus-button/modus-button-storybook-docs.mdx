@@ -1,4 +1,5 @@
 import { Anchor } from '@storybook/addon-docs';
+import * as ComponentStories from './modus-button.stories';
 
 # Button
 
@@ -19,7 +20,7 @@ For Icon only Buttons,
 
 - Outline buttons only support `primary` and `secondary` colors.
 
-<Anchor storyId="components-button--default" />
+<Anchor of={ComponentStories.Default} />
 
 ### Default
 
@@ -37,13 +38,13 @@ For Icon only Buttons,
   &nbsp;Loading...
 </modus-button>
 
-<Anchor storyId="components-button--borderless" />
+<Anchor of={ComponentStories.Borderless} />
 
 ### Borderless
 
 <modus-button button-style="borderless">Borderless</modus-button>
 
-<Anchor storyId="components-button--outline" />
+<Anchor of={ComponentStories.Outline} />
 
 ### Outline
 
@@ -69,7 +70,7 @@ For Icon only Buttons,
 <modus-button button-style="outline" color="secondary">Outline</modus-button>
 ```
 
-<Anchor storyId="components-button--icon-with-text" />
+<Anchor of={ComponentStories.IconWithText} />
 
 ### Icon with Text Button
 
@@ -77,7 +78,7 @@ For Icon only Buttons,
 <modus-button color="secondary" right-icon="notifications">Secondary</modus-button>
 <modus-button size="large" left-icon="notifications" color="tertiary" right-icon="notifications">Tertiary</modus-button>
 
-<Anchor storyId="components-button--icon-only" />
+<Anchor of={ComponentStories.IconOnly} />
 
 ### Icon Only Button
 
@@ -123,7 +124,7 @@ For Icon only Buttons,
 <modus-button button-style="borderless" color="tertiary" icon-only="notifications" aria-label="Notifications"></modus-button>
 ```
 
-<Anchor storyId="components-button--with-caret" />
+<Anchor of={ComponentStories.WithCaret} />
 
 ### With Caret Icon
 

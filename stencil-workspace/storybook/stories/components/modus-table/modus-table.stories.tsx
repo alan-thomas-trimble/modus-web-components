@@ -1,4 +1,4 @@
-import { html } from 'lit-html';
+import { html } from 'lit';
 // @ts-ignore: JSX/MDX with Stencil
 import docs from './modus-table-storybook-docs.mdx';
 

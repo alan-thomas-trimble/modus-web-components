@@ -1,6 +1,6 @@
 // @ts-ignore: JSX/MDX with Stencil
 import docs from './modus-sentiment-scale-storybook-docs.mdx';
-import { html } from 'lit-html';
+import { html } from 'lit';
 
 //changed
 export default {

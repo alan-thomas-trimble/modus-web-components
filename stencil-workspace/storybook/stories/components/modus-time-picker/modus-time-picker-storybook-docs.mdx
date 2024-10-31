@@ -1,4 +1,5 @@
 import { Story } from '@storybook/addon-docs';
+import * as ComponentStories from './modus-time-picker.stories';
 
 # Time Picker
 
@@ -21,7 +22,7 @@ import { Story } from '@storybook/addon-docs';
 
 ### Default
 
-<Story id="user-inputs-time-picker--default" />
+<Story of={ComponentStories.Default} />
 
 ```html
 <modus-time-picker label="Time" placeholder="23:39" helper-text="hh:mm"></modus-time-picker>
@@ -29,7 +30,7 @@ import { Story } from '@storybook/addon-docs';
 
 #### 12 Hour Format
 
-<Story id="user-inputs-time-picker--time-format" />
+<Story of={ComponentStories.TimeFormat} />
 
 ```html
 <modus-time-picker
@@ -42,7 +43,7 @@ import { Story } from '@storybook/addon-docs';
 
 ### Auto Format
 
-<Story id="user-inputs-time-picker--auto-format" />
+<Story of={ComponentStories.AutoFormat} />
 
 ```html
 <modus-time-picker
@@ -56,7 +57,7 @@ import { Story } from '@storybook/addon-docs';
 
 ### Time Picker with Time Zone
 
-<Story id="user-inputs-time-picker--with-time-zone" />
+<Story of={ComponentStories.WithTimeZone} />
 
 ```html
 <modus-time-picker helper-text="hh:mm" label="Time" max-length="10" auto-format="true" value="23:39">

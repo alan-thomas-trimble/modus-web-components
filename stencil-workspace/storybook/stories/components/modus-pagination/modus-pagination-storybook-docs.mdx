@@ -1,4 +1,5 @@
 import { Anchor } from '@storybook/addon-docs';
+import * as ComponentStories from './modus-pagination.stories';
 
 # Pagination
 
@@ -6,19 +7,19 @@ import { Anchor } from '@storybook/addon-docs';
 
 [Modus Pagination](https://modus.trimble.com/components/pagination/) web components are referenced using the `<modus-pagination>` custom HTML element.
 
-<Anchor storyId="components-pagination--default" />
+<Anchor of={ComponentStories.Default} />
 
 ### Default
 
 <modus-pagination active-page="8" max-page="32" min-page="1" size="medium"></modus-pagination>
 
-<Anchor storyId="components-pagination--large" />
+<Anchor of={ComponentStories.Large} />
 
 ### Large
 
 <modus-pagination active-page="8" max-page="32" min-page="1" size="large"></modus-pagination>
 
-<Anchor storyId="components-pagination--small" />
+<Anchor of={ComponentStories.Small} />
 
 ### Small
 

@@ -1,6 +1,6 @@
 // @ts-ignore: JSX/MDX with Stencil
 import docs from './modus-icons-storybook-docs.mdx';
-import { html } from 'lit-html';
+import { html } from 'lit';
 import { MODUS_ICON_NAMES } from '../../../../src/icons/ModusIconUtilities';
 
 export default {

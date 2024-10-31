@@ -1,4 +1,5 @@
 import { Story } from '@storybook/addon-docs';
+import * as ComponentStories from './modus-autocomplete.stories';
 
 # Autocomplete
 
@@ -18,23 +19,23 @@ from a set of choices. When the user enters text into the input field, a list of
 
 ### Default
 
-<Story id="user-inputs-autocomplete--default" />
+<Story of={ComponentStories.Default} />
 
 ### With Option
 
-<Story id="user-inputs-autocomplete--with-option" />
+<Story of={ComponentStories.WithOption} />
 
 ### Multiple Selection
 
-<Story id="user-inputs-autocomplete--multiple-selection" />
+<Story of={ComponentStories.MultipleSelection} />
 
 ### With Custom Option
 
-<Story id="user-inputs-autocomplete--with-custom-option" />
+<Story of={ComponentStories.WithCustomOption} />
 
 ### With Dynamic Options
 
-<Story id="user-inputs-autocomplete--with-dynamic-options" />
+<Story of={ComponentStories.WithDynamicOptions} />
 
 ```html
 <div style="width: 500px">

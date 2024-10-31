@@ -1,4 +1,5 @@
 import { Anchor } from '@storybook/addon-docs';
+import * as ComponentStories from './modus-file-dropzone.stories';
 
 # File Dropzone
 
@@ -16,7 +17,7 @@ They are referenced using the `<modus-file-dropzone>` tag.
 - When error state is triggered reset button will be displayed to clear the error state.
   - The reset button will clear the error state and remove all files from the dropzone.
 
-<Anchor storyId="components-file-dropzone--default" />
+<Anchor of={ComponentStories.Default} />
 
 ### Default
 
@@ -75,12 +76,12 @@ They are referenced using the `<modus-file-dropzone>` tag.
 
 ## Methods
 
-| Method name  | Description                     | Parameter          | Return            |
-| ------------ | ------------------------------- | ------------------ | ----------------- | ----- |
-| `addFile`    | Add a file to the dropzone      | `file: File`       | `Promise<void>`   |
-| `getError`   | Get the dropzone's error        |                    | Promise<string    | null> |
-| `getFiles`   | Get the dropzone's files        |                    | `Promise<File[]>` |
-| `removeFile` | Remove a file from the dropzone | `fileName: string` | `Promise<void>`   |
+| Method name  | Description                     | Parameter          | Return                    |
+| ------------ | ------------------------------- | ------------------ | ------------------------- |
+| `addFile`    | Add a file to the dropzone      | `file: File`       | `Promise<void>`           |
+| `getError`   | Get the dropzone's error        |                    | `Promise<string \| null>` |
+| `getFiles`   | Get the dropzone's files        |                    | `Promise<File[]>`         |
+| `removeFile` | Remove a file from the dropzone | `fileName: string` | `Promise<void>`           |
 
 ### Accessibility
 

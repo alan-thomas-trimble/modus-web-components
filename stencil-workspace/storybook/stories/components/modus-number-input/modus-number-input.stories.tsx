@@ -2,7 +2,7 @@
 
 // @ts-ignore: JSX/MDX with Stencil
 import docs from './modus-number-input-storybook-docs.mdx';
-import { html } from 'lit-html';
+import { html } from 'lit';
 
 export default {
   title: 'User Inputs/Number Input',

@@ -1,4 +1,5 @@
 import { Anchor } from '@storybook/addon-docs';
+import * as ComponentStories from './modus-toast.stories';
 
 # Toast
 
@@ -10,31 +11,31 @@ import { Anchor } from '@storybook/addon-docs';
 
 <modus-toast type="primary">Primary</modus-toast>
 
-<Anchor storyId="components-toast--primary" />
+<Anchor of={ComponentStories.Primary} />
 
 ### Secondary
 
 <modus-toast type="secondary">Secondary</modus-toast>
 
-<Anchor storyId="components-toast--secondary" />
+<Anchor of={ComponentStories.Secondary} />
 
 ### Success
 
 <modus-toast type="success">Success</modus-toast>
 
-<Anchor storyId="components-toast--success" />
+<Anchor of={ComponentStories.Success} />
 
 ### Danger
 
 <modus-toast type="danger">Danger</modus-toast>
 
-<Anchor storyId="components-toast--danger" />
+<Anchor of={ComponentStories.Danger} />
 
 ### Retained Toast
 
 <modus-toast type="primary" retain-element="true">Retained Toast</modus-toast>
 
-<Anchor storyId="components-toast--retained-toast" />
+<Anchor of={ComponentStories.RetainedToast} />
 
 ```html
 <modus-toast type="primary">Primary</modus-toast>

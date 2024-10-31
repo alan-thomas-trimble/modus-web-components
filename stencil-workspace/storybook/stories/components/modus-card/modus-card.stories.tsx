@@ -1,6 +1,6 @@
 // @ts-ignore: JSX/MDX with Stencil
 import docs from './modus-card-storybook-docs.mdx';
-import { html } from 'lit-html';
+import { html } from 'lit';
 
 export default {
   title: 'Components/Card',

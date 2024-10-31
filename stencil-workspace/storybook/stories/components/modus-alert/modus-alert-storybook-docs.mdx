@@ -1,4 +1,5 @@
 import { Anchor, Story } from '@storybook/addon-docs';
+import * as ComponentStories from './modus-alert.stories';
 
 # Alert
 
@@ -6,50 +7,50 @@ import { Anchor, Story } from '@storybook/addon-docs';
 
 [Modus Alert](https://modus.trimble.com/components/alerts/) web components provide well defined elements for rendering system level messages. They are referenced using the `<modus-alert>` custom HTML element.
 
-<Anchor storyId="components-alert--default" />
+<Anchor of={ComponentStories.Default} />
 
 ### Default
 
 <modus-alert message="Info alert (default)"></modus-alert>
 
-<Anchor storyId="components-alert--dismissible" />
+<Anchor of={ComponentStories.Dismissible} />
 
 ### Dismissible
 
 <modus-alert dismissible message="Dismissible alert"></modus-alert>
 
-<Anchor storyId="components-alert--action-button" />
+<Anchor of={ComponentStories.ActionButton} />
 
 ### Action button
 
 <modus-alert message="Info alert with action button" button-text="Action"></modus-alert>
 
-<Anchor storyId="components-alert--error" />
+<Anchor of={ComponentStories.Error} />
 
 ### Error
 
 <modus-alert message="Error alert" type="error"></modus-alert>
 
-<Anchor storyId="components-alert--success" />
+<Anchor of={ComponentStories.Success} />
 
 ### Success
 
 <modus-alert message="Success alert" type="success"></modus-alert>
 
-<Anchor storyId="components-alert--warning" />
+<Anchor of={ComponentStories.Warning} />
 
 ### Warning
 
 <modus-alert message="Warning alert" type="warning"></modus-alert>
 
-<Anchor storyId="components-alert--with-link" />
+<Anchor of={ComponentStories.WithLink} />
 
 ### Alert with Link
 
 The `<modus-alert>` utilizes the slot element, allowing you to insert links in the alert message.
 Note: If anchor tags are nested, it is required to apply CSS variables `--modus-alert-<variant>-link-color` on the link, due to the limitations of nested `slot` elements.
 
-<Story id="components-alert--with-link" />
+<Story of={ComponentStories.WithLink} />
 
 ```html
 <modus-alert message="Info alert (default)"></modus-alert>

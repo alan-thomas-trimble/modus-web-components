@@ -1,3 +1,6 @@
+import { Anchor } from '@storybook/addon-docs';
+import * as ComponentStories from './modus-progress-bar.stories';
+
 # Progress Bar
 
 ---
@@ -10,7 +13,7 @@
   <modus-progress-bar value="3" max-value="4" min-value="0" text="75%"></modus-progress-bar>
 </div>
 
-<Anchor storyId="components-progress-bar--default" />
+<Anchor of={ComponentStories.Default} />
 
 ### Small
 
@@ -18,7 +21,7 @@
   <modus-progress-bar value="3" max-value="4" min-value="0" size="small"></modus-progress-bar>
 </div>
 
-<Anchor storyId="components-progress-bar--small" />
+<Anchor of={ComponentStories.Small} />
 
 ### Compact
 
@@ -32,7 +35,7 @@
   <modus-progress-bar mode="indeterminate"></modus-progress-bar>
 </div>
 
-<Anchor storyId="components-progress-bar--compact" />
+<Anchor of={ComponentStories.Compact} />
 
 ```html
 <modus-progress-bar value="3" max-value="4" min-value="0" text="75%"></modus-progress-bar>
