@@ -26,14 +26,21 @@ const Template = ({ size }) => html`
   <modus-tabs id="my-tabs" size=${size}></modus-tabs>
   ${setTabs()}
 `;
-export const Default = Template.bind({});
-Default.args = {
-  size: 'medium',
+
+export const Default = {
+  render: Template,
+
+  args: {
+    size: 'medium',
+  },
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
+export const Small = {
+  render: Template,
+
+  args: {
+    size: 'small',
+  },
 };
 
 const setTabs = () => {

@@ -61,16 +61,22 @@ const IconOnlyTemplate = ({ ariaLabel, disabled }) => html`
   </modus-toolbar>
 `;
 
-export const Default = Template.bind({});
-Default.args = {
-  ariaLabel: 'Toolbar',
-  disabled: false,
-  tabIndex: 0,
+export const Default = {
+  render: Template,
+
+  args: {
+    ariaLabel: 'Toolbar',
+    disabled: false,
+    tabIndex: 0,
+  },
 };
 
-export const IconOnly = IconOnlyTemplate.bind({});
-IconOnly.args = {
-  ariaLabel: 'Toolbar',
-  disabled: false,
-  tabIndex: 0,
+export const IconOnly = {
+  render: IconOnlyTemplate,
+
+  args: {
+    ariaLabel: 'Toolbar',
+    disabled: false,
+    tabIndex: 0,
+  },
 };

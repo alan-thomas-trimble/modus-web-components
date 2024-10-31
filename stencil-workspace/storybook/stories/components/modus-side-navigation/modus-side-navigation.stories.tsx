@@ -118,13 +118,17 @@ const DefaultTemplate = ({ collapseOnClickOutside, maxWidth, mode, expanded, tar
   </div>
   ${setJavascriptDefaultTemplate('defaultTemplate')}
 `;
-export const Default = DefaultTemplate.bind({});
-Default.args = {
-  collapseOnClickOutside: true,
-  maxWidth: '300px',
-  mode: 'overlay',
-  expanded: false,
-  targetContent: '#defaultTemplate #panelcontent',
+
+export const Default = {
+  render: DefaultTemplate,
+
+  args: {
+    collapseOnClickOutside: true,
+    maxWidth: '300px',
+    mode: 'overlay',
+    expanded: false,
+    targetContent: '#defaultTemplate #panelcontent',
+  },
 };
 
 const SideNavigationWithDataTemplate = ({ collapseOnClickOutside, maxWidth, mode, expanded, targetContent }) => html`
@@ -166,13 +170,17 @@ const SideNavigationWithDataTemplate = ({ collapseOnClickOutside, maxWidth, mode
   </div>
   ${setJavascriptDataTemplate('dataTemplate')}
 `;
-export const SideNavigationWithData = SideNavigationWithDataTemplate.bind({});
-SideNavigationWithData.args = {
-  collapseOnClickOutside: true,
-  maxWidth: '300px',
-  mode: 'overlay',
-  expanded: true,
-  targetContent: '#dataTemplate #panelcontent',
+
+export const SideNavigationWithData = {
+  render: SideNavigationWithDataTemplate,
+
+  args: {
+    collapseOnClickOutside: true,
+    maxWidth: '300px',
+    mode: 'overlay',
+    expanded: true,
+    targetContent: '#dataTemplate #panelcontent',
+  },
 };
 
 const helpers = (containerId) => {

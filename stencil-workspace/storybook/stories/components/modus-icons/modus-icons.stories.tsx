@@ -78,5 +78,7 @@ const Template = ({ name, size, color }) => html`
   </div>
 `;
 
-export const Default = Template.bind({});
-Default.args = DefaultTemplateArgs;
+export const Default = {
+  render: Template,
+  args: DefaultTemplateArgs,
+};

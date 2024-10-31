@@ -118,52 +118,55 @@ export default {
   },
 };
 
-export const Default = ({
-  acceptFileTypes,
-  ariaLabel,
-  disabled,
-  description,
-  dropzoneHeight,
-  dropzoneWidth,
-  fileDraggedOverInstructions,
-  includeStateIcon,
-  instructions,
-  label,
-  maxFileCount,
-  maxFileNameLength,
-  maxTotalFileSizeBytes,
-  multiple,
-}) => html`
-  <modus-file-dropzone
-    accept-file-types=${acceptFileTypes}
-    aria-label=${ariaLabel}
-    ?disabled=${disabled}
-    description=${description}
-    dropzone-height=${dropzoneHeight}
-    dropzone-width=${dropzoneWidth}
-    file-dragged-over-instructions=${fileDraggedOverInstructions}
-    include-state-icon=${includeStateIcon}
-    instructions=${instructions}
-    label=${label}
-    max-file-count=${maxFileCount}
-    max-file-name-length=${maxFileNameLength}
-    max-total-file-size-bytes=${maxTotalFileSizeBytes}
-    multiple=${multiple}>
-  </modus-file-dropzone>
-`;
-Default.args = {
-  acceptFileTypes: '.doc,.docx',
-  ariaLabel: 'dropzone',
-  disabled: false,
-  description: 'File dropzone description',
-  dropzoneHeight: '200px',
-  dropzoneWidth: '500px',
-  fileDraggedOverInstructions: 'Drag files here.',
-  includeStateIcon: true,
-  instructions: 'Drag files here or browse to upload.',
-  label: 'Dropzone Label',
-  maxFileCount: '4',
-  maxFileNameLength: '20',
-  maxTotalFileSizeBytes: '1000000',
-  multiple: true,
+export const Default = {
+  render: ({
+    acceptFileTypes,
+    ariaLabel,
+    disabled,
+    description,
+    dropzoneHeight,
+    dropzoneWidth,
+    fileDraggedOverInstructions,
+    includeStateIcon,
+    instructions,
+    label,
+    maxFileCount,
+    maxFileNameLength,
+    maxTotalFileSizeBytes,
+    multiple,
+  }) => html`
+    <modus-file-dropzone
+      accept-file-types=${acceptFileTypes}
+      aria-label=${ariaLabel}
+      ?disabled=${disabled}
+      description=${description}
+      dropzone-height=${dropzoneHeight}
+      dropzone-width=${dropzoneWidth}
+      file-dragged-over-instructions=${fileDraggedOverInstructions}
+      include-state-icon=${includeStateIcon}
+      instructions=${instructions}
+      label=${label}
+      max-file-count=${maxFileCount}
+      max-file-name-length=${maxFileNameLength}
+      max-total-file-size-bytes=${maxTotalFileSizeBytes}
+      multiple=${multiple}>
+    </modus-file-dropzone>
+  `,
+
+  args: {
+    acceptFileTypes: '.doc,.docx',
+    ariaLabel: 'dropzone',
+    disabled: false,
+    description: 'File dropzone description',
+    dropzoneHeight: '200px',
+    dropzoneWidth: '500px',
+    fileDraggedOverInstructions: 'Drag files here.',
+    includeStateIcon: true,
+    instructions: 'Drag files here or browse to upload.',
+    label: 'Dropzone Label',
+    maxFileCount: '4',
+    maxFileNameLength: '20',
+    maxTotalFileSizeBytes: '1000000',
+    multiple: true,
+  },
 };

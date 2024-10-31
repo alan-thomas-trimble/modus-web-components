@@ -115,87 +115,93 @@ export default {
   },
 };
 
-export const Default = ({
-  active,
-  ariaLabel,
-  chipStyle,
-  disabled,
-  hasError,
-  imageUrl,
-  maxWidth,
-  showCheckmark,
-  showClose,
-  size,
-  value,
-  chipId,
-}) => html`
-  <modus-chip
-    active=${active}
-    aria-label=${ariaLabel}
-    chip-style=${chipStyle}
-    ?disabled=${disabled}
-    has-error=${hasError}
-    image-url=${imageUrl}
-    max-width=${maxWidth}
-    show-checkmark=${showCheckmark}
-    show-close=${showClose}
-    size=${size}
-    value=${value}
-    chip-id=${chipId}>
-  </modus-chip>
-`;
-Default.args = {
-  active: false,
-  ariaLabel: '',
-  chipStyle: 'solid',
-  disabled: false,
-  hasError: false,
-  imageUrl: 'https://randomuser.me/api/portraits/lego/1.jpg',
-  maxWidth: '100px',
-  showCheckmark: false,
-  showClose: false,
-  size: 'medium',
-  value: 'Bryan',
-  chipId: '',
+export const Default = {
+  render: ({
+    active,
+    ariaLabel,
+    chipStyle,
+    disabled,
+    hasError,
+    imageUrl,
+    maxWidth,
+    showCheckmark,
+    showClose,
+    size,
+    value,
+    chipId,
+  }) => html`
+    <modus-chip
+      active=${active}
+      aria-label=${ariaLabel}
+      chip-style=${chipStyle}
+      ?disabled=${disabled}
+      has-error=${hasError}
+      image-url=${imageUrl}
+      max-width=${maxWidth}
+      show-checkmark=${showCheckmark}
+      show-close=${showClose}
+      size=${size}
+      value=${value}
+      chip-id=${chipId}>
+    </modus-chip>
+  `,
+
+  args: {
+    active: false,
+    ariaLabel: '',
+    chipStyle: 'solid',
+    disabled: false,
+    hasError: false,
+    imageUrl: 'https://randomuser.me/api/portraits/lego/1.jpg',
+    maxWidth: '100px',
+    showCheckmark: false,
+    showClose: false,
+    size: 'medium',
+    value: 'Bryan',
+    chipId: '',
+  },
 };
 
-export const Outline = ({
-  active,
-  ariaLabel,
-  chipStyle,
-  disabled,
-  hasError,
-  imageUrl,
-  maxWidth,
-  showCheckmark,
-  showClose,
-  size,
-  value,
-}) => html`
-  <modus-chip
-    active=${active}
-    aria-label=${ariaLabel}
-    chip-style=${chipStyle}
-    ?disabled=${disabled}
-    has-error=${hasError}
-    image-url=${imageUrl}
-    max-width=${maxWidth}
-    show-checkmark=${showCheckmark}
-    show-close=${showClose}
-    size=${size}
-    value=${value}>
-  </modus-chip>
-`;
-Outline.args = {
-  active: false,
-  ariaLabel: '',
-  chipStyle: 'outline',
-  disabled: false,
-  hasError: false,
-  imageUrl: 'https://randomuser.me/api/portraits/lego/1.jpg',
-  maxWidth: '100px',
-  showCheckmark: false,
-  showClose: false,
-  size: 'medium',
-  value: 'Bryan',
+export const Outline = {
+  render: ({
+    active,
+    ariaLabel,
+    chipStyle,
+    disabled,
+    hasError,
+    imageUrl,
+    maxWidth,
+    showCheckmark,
+    showClose,
+    size,
+    value,
+  }) => html`
+    <modus-chip
+      active=${active}
+      aria-label=${ariaLabel}
+      chip-style=${chipStyle}
+      ?disabled=${disabled}
+      has-error=${hasError}
+      image-url=${imageUrl}
+      max-width=${maxWidth}
+      show-checkmark=${showCheckmark}
+      show-close=${showClose}
+      size=${size}
+      value=${value}>
+    </modus-chip>
+  `,
+
+  args: {
+    active: false,
+    ariaLabel: '',
+    chipStyle: 'outline',
+    disabled: false,
+    hasError: false,
+    imageUrl: 'https://randomuser.me/api/portraits/lego/1.jpg',
+    maxWidth: '100px',
+    showCheckmark: false,
+    showClose: false,
+    size: 'medium',
+    value: 'Bryan',
+  },
 };

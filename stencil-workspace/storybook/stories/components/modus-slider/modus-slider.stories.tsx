@@ -73,12 +73,15 @@ const Template = ({ ariaLabel, disabled, label, maxValue, minValue, value }) => 
   </modus-slider>
 `;
 
-export const Default = Template.bind({});
-Default.args = {
-  ariaLabel: '',
-  disabled: false,
-  label: 'Label',
-  maxValue: 100,
-  minValue: 0,
-  value: 50,
+export const Default = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    disabled: false,
+    label: 'Label',
+    maxValue: 100,
+    minValue: 0,
+    value: 50,
+  },
 };

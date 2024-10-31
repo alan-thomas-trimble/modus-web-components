@@ -280,168 +280,181 @@ const customOptions = [
   { id: 'ID2', value: 'Orange' },
 ];
 
-export const Default = Template.bind({});
-Default.args = defaultArgs;
-
-export const WithOption = Template.bind({});
-WithOption.args = { ...defaultArgs, label: 'Autocomplete using option model' };
-
-export const MultipleSelection = Template.bind({});
-MultipleSelection.args = {
-  ...defaultArgs,
-  label: 'Autocomplete with multiple selection',
-  multiple: true,
-  value: ['Apple', 'Banana'],
-  options: customOptions,
+export const Default = {
+  render: Template,
+  args: defaultArgs,
 };
 
-export const WithCustomOption = ({
-  ariaLabel,
-  clearable,
-  disabled,
-  dropdownMaxHeight,
-  dropdownZIndex,
-  disableCloseOnSelect,
-  errorText,
-  includeSearchIcon,
-  label,
-  multiple,
-  noResultsFoundText,
-  noResultsFoundSubtext,
-  placeholder,
-  readOnly,
-  required,
-  showNoResultsFoundMessage,
-  showOptionsOnFocus,
-  size,
-  value,
-}) => html`
-  <div style="width: 600px">
-    <modus-autocomplete
-      aria-label=${ariaLabel}
-      clearable=${clearable}
-      disabled=${disabled}
-      dropdown-max-height=${dropdownMaxHeight}
-      dropdown-z-index=${dropdownZIndex}
-      disable-close-on-select=${disableCloseOnSelect}
-      error-text=${errorText}
-      include-search-icon=${includeSearchIcon}
-      label=${label}
-      multiple=${multiple}
-      no-results-found-text=${noResultsFoundText}
-      no-results-found-subtext=${noResultsFoundSubtext}
-      placeholder=${placeholder}
-      read-only=${readOnly}
-      required=${required}
-      show-no-results-found-message=${showNoResultsFoundMessage}
-      show-options-on-focus=${showOptionsOnFocus}
-      size=${size}
-      value=${value}>
-      <li data-search-value="The Git Guru" data-id="1" style="padding: 8px">
-        <div style="font-weight: bold">The Git Guru</div>
-        <div style="font-size: 12px">Lead DevOps Engineer</div>
-      </li>
-      <li data-search-value="Bob the Builder" data-id="2" style="padding: 8px">
-        <div style="font-weight: bold">Bob the Builder</div>
-        <div style="font-size: 12px">Senior Construction Engineer</div>
-      </li>
-    </modus-autocomplete>
-  </div>
-`;
-
-WithCustomOption.args = {
-  ariaLabel: 'autocomplete',
-  clearable: false,
-  disabled: false,
-  dropdownMaxHeight: '300px',
-  dropdownZIndex: '1',
-  disableCloseOnSelect: false,
-  errorText: '',
-  includeSearchIcon: true,
-  label: 'Employee Search',
-  multiple: false,
-  noResultsFoundText: 'No results found',
-  noResultsFoundSubtext: 'Check spelling or try a different keyword',
-  placeholder: 'Search...',
-  readOnly: false,
-  required: false,
-  showNoResultsFoundMessage: true,
-  showOptionsOnFocus: false,
-  size: 'medium',
-  value: '',
+export const WithOption = {
+  render: Template,
+  args: { ...defaultArgs, label: 'Autocomplete using option model' },
 };
 
-export const WithDynamicOptions = ({
-  ariaLabel,
-  clearable,
-  disabled,
-  dropdownMaxHeight,
-  dropdownZIndex,
-  disableCloseOnSelect,
-  errorText,
-  includeSearchIcon,
-  label,
-  loading,
-  multiple,
-  noResultsFoundText,
-  noResultsFoundSubtext,
-  placeholder,
-  readOnly,
-  required,
-  showNoResultsFoundMessage,
-  showOptionsOnFocus,
-  size,
-  value,
-}) => html`
-  <div style="width: 600px">
-    <modus-autocomplete
-      aria-label=${ariaLabel}
-      clearable=${clearable}
-      disabled=${disabled}
-      dropdown-max-height=${dropdownMaxHeight}
-      dropdown-z-index=${dropdownZIndex}
-      disable-close-on-select=${disableCloseOnSelect}
-      error-text=${errorText}
-      include-search-icon=${includeSearchIcon}
-      id="dynamic-options"
-      label=${label}
-      loading=${loading}
-      multiple=${multiple}
-      no-results-found-text=${noResultsFoundText}
-      no-results-found-subtext=${noResultsFoundSubtext}
-      placeholder=${placeholder}
-      read-only=${readOnly}
-      required=${required}
-      show-no-results-found-message=${showNoResultsFoundMessage}
-      show-options-on-focus=${showOptionsOnFocus}
-      size=${size}
-      .value=${value}>
-    </modus-autocomplete>
-  </div>
-  ${setDynamicOptions()}
-`;
-WithDynamicOptions.args = {
-  ariaLabel: 'autocomplete',
-  clearable: false,
-  disabled: false,
-  dropdownMaxHeight: '300px',
-  dropdownZIndex: '1',
-  disableCloseOnSelect: false,
-  errorText: '',
-  includeSearchIcon: true,
-  label: 'Dynamic Autocomplete',
-  loading: false,
-  multiple: false,
-  noResultsFoundText: 'No results found',
-  noResultsFoundSubtext: 'Check spelling or try a different keyword',
-  placeholder: 'Search...',
-  readOnly: false,
-  required: false,
-  showNoResultsFoundMessage: true,
-  showOptionsOnFocus: false,
-  size: 'medium',
-  value: '',
+export const MultipleSelection = {
+  render: Template,
+
+  args: {
+    ...defaultArgs,
+    label: 'Autocomplete with multiple selection',
+    multiple: true,
+    value: ['Apple', 'Banana'],
+    options: customOptions,
+  },
 };
+
+export const WithCustomOption = {
+  render: ({
+    ariaLabel,
+    clearable,
+    disabled,
+    dropdownMaxHeight,
+    dropdownZIndex,
+    disableCloseOnSelect,
+    errorText,
+    includeSearchIcon,
+    label,
+    multiple,
+    noResultsFoundText,
+    noResultsFoundSubtext,
+    placeholder,
+    readOnly,
+    required,
+    showNoResultsFoundMessage,
+    showOptionsOnFocus,
+    size,
+    value,
+  }) => html`
+    <div style="width: 600px">
+      <modus-autocomplete
+        aria-label=${ariaLabel}
+        clearable=${clearable}
+        disabled=${disabled}
+        dropdown-max-height=${dropdownMaxHeight}
+        dropdown-z-index=${dropdownZIndex}
+        disable-close-on-select=${disableCloseOnSelect}
+        error-text=${errorText}
+        include-search-icon=${includeSearchIcon}
+        label=${label}
+        multiple=${multiple}
+        no-results-found-text=${noResultsFoundText}
+        no-results-found-subtext=${noResultsFoundSubtext}
+        placeholder=${placeholder}
+        read-only=${readOnly}
+        required=${required}
+        show-no-results-found-message=${showNoResultsFoundMessage}
+        show-options-on-focus=${showOptionsOnFocus}
+        size=${size}
+        value=${value}>
+        <li data-search-value="The Git Guru" data-id="1" style="padding: 8px">
+          <div style="font-weight: bold">The Git Guru</div>
+          <div style="font-size: 12px">Lead DevOps Engineer</div>
+        </li>
+        <li data-search-value="Bob the Builder" data-id="2" style="padding: 8px">
+          <div style="font-weight: bold">Bob the Builder</div>
+          <div style="font-size: 12px">Senior Construction Engineer</div>
+        </li>
+      </modus-autocomplete>
+    </div>
+  `,
+
+  args: {
+    ariaLabel: 'autocomplete',
+    clearable: false,
+    disabled: false,
+    dropdownMaxHeight: '300px',
+    dropdownZIndex: '1',
+    disableCloseOnSelect: false,
+    errorText: '',
+    includeSearchIcon: true,
+    label: 'Employee Search',
+    multiple: false,
+    noResultsFoundText: 'No results found',
+    noResultsFoundSubtext: 'Check spelling or try a different keyword',
+    placeholder: 'Search...',
+    readOnly: false,
+    required: false,
+    showNoResultsFoundMessage: true,
+    showOptionsOnFocus: false,
+    size: 'medium',
+    value: '',
+  },
+};
+
+export const WithDynamicOptions = {
+  render: ({
+    ariaLabel,
+    clearable,
+    disabled,
+    dropdownMaxHeight,
+    dropdownZIndex,
+    disableCloseOnSelect,
+    errorText,
+    includeSearchIcon,
+    label,
+    loading,
+    multiple,
+    noResultsFoundText,
+    noResultsFoundSubtext,
+    placeholder,
+    readOnly,
+    required,
+    showNoResultsFoundMessage,
+    showOptionsOnFocus,
+    size,
+    value,
+  }) => html`
+    <div style="width: 600px">
+      <modus-autocomplete
+        aria-label=${ariaLabel}
+        clearable=${clearable}
+        disabled=${disabled}
+        dropdown-max-height=${dropdownMaxHeight}
+        dropdown-z-index=${dropdownZIndex}
+        disable-close-on-select=${disableCloseOnSelect}
+        error-text=${errorText}
+        include-search-icon=${includeSearchIcon}
+        id="dynamic-options"
+        label=${label}
+        loading=${loading}
+        multiple=${multiple}
+        no-results-found-text=${noResultsFoundText}
+        no-results-found-subtext=${noResultsFoundSubtext}
+        placeholder=${placeholder}
+        read-only=${readOnly}
+        required=${required}
+        show-no-results-found-message=${showNoResultsFoundMessage}
+        show-options-on-focus=${showOptionsOnFocus}
+        size=${size}
+        .value=${value}>
+      </modus-autocomplete>
+    </div>
+    ${setDynamicOptions()}
+  `,
+
+  args: {
+    ariaLabel: 'autocomplete',
+    clearable: false,
+    disabled: false,
+    dropdownMaxHeight: '300px',
+    dropdownZIndex: '1',
+    disableCloseOnSelect: false,
+    errorText: '',
+    includeSearchIcon: true,
+    label: 'Dynamic Autocomplete',
+    loading: false,
+    multiple: false,
+    noResultsFoundText: 'No results found',
+    noResultsFoundSubtext: 'Check spelling or try a different keyword',
+    placeholder: 'Search...',
+    readOnly: false,
+    required: false,
+    showNoResultsFoundMessage: true,
+    showOptionsOnFocus: false,
+    size: 'medium',
+    value: '',
+  },
+};
+
 const setDynamicOptions = () => {
   const tag = document.createElement('script');
   tag.innerHTML = `

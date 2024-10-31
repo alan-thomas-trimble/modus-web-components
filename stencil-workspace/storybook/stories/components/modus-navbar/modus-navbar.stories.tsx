@@ -172,38 +172,41 @@ const Template = ({
   </modus-navbar>
 `;
 
-export const Default = Template.bind({});
-Default.args = {
-  enableSearchOverlay: false,
-  helpTooltip: undefined,
-  navAriaLabel: 'Default',
-  profileMenuOptions: {
-    avatarUrl: workingAvatarUrl,
-    email: 'modus_user@trimble.com',
-    initials: 'MU',
-    signOutText: 'Sign out',
-    username: 'Modus User',
-    links: [
-      {
-        id: 'link1',
-        display: 'Link 1',
-        icon: 'moon',
+export const Default = {
+  render: Template,
+
+  args: {
+    enableSearchOverlay: false,
+    helpTooltip: undefined,
+    navAriaLabel: 'Default',
+    profileMenuOptions: {
+      avatarUrl: workingAvatarUrl,
+      email: 'modus_user@trimble.com',
+      initials: 'MU',
+      signOutText: 'Sign out',
+      username: 'Modus User',
+      links: [
+        {
+          id: 'link1',
+          display: 'Link 1',
+          icon: 'moon',
+        },
+        {
+          id: 'link2',
+          display: 'Link 2',
+          icon: 'sun',
+        },
+      ],
+      tooltip: {
+        text: 'User Profile Menu',
       },
-      {
-        id: 'link2',
-        display: 'Link 2',
-        icon: 'sun',
-      },
-    ],
-    tooltip: {
-      text: 'User Profile Menu',
     },
+    searchTooltip: undefined,
+    showHelp: false,
+    showProfile: true,
+    showSearch: false,
+    notificationCount: 0,
   },
-  searchTooltip: undefined,
-  showHelp: false,
-  showProfile: true,
-  showSearch: false,
-  notificationCount: 0,
 };
 
 const FailedToLoadAvatarTemplate = ({
@@ -240,24 +243,27 @@ const FailedToLoadAvatarTemplate = ({
   </modus-navbar>
 `;
 
-export const FailedAvatar = FailedToLoadAvatarTemplate.bind({});
-FailedAvatar.args = {
-  buttons: [],
-  enableSearchOverlay: false,
-  helpTooltip: undefined,
-  navAriaLabel: 'Failed Avatar',
-  profileMenuOptions: {
-    avatarUrl: failingAvatarUrl,
-    email: 'modus_user@trimble.com',
-    initials: 'MU',
-    signOutText: 'Sign out',
-    username: 'Modus User',
+export const FailedAvatar = {
+  render: FailedToLoadAvatarTemplate,
+
+  args: {
+    buttons: [],
+    enableSearchOverlay: false,
+    helpTooltip: undefined,
+    navAriaLabel: 'Failed Avatar',
+    profileMenuOptions: {
+      avatarUrl: failingAvatarUrl,
+      email: 'modus_user@trimble.com',
+      initials: 'MU',
+      signOutText: 'Sign out',
+      username: 'Modus User',
+    },
+    searchTooltip: undefined,
+    showHelp: false,
+    showProfile: true,
+    showSearch: false,
+    notificationCount: 0,
   },
-  searchTooltip: undefined,
-  showHelp: false,
-  showProfile: true,
-  showSearch: false,
-  notificationCount: 0,
 };
 
 const BlueTemplate = ({
@@ -295,24 +301,27 @@ const BlueTemplate = ({
   </modus-navbar>
 `;
 
-export const BlueNavbar = BlueTemplate.bind({});
-BlueNavbar.args = {
-  buttons: [],
-  enableSearchOverlay: false,
-  helpTooltip: undefined,
-  navAriaLabel: 'Blue navbar',
-  profileMenuOptions: {
-    avatarUrl: workingAvatarUrl,
-    email: 'modus_user@trimble.com',
-    initials: 'MU',
-    signOutText: 'Sign out',
-    username: 'Modus User',
+export const BlueNavbar = {
+  render: BlueTemplate,
+
+  args: {
+    buttons: [],
+    enableSearchOverlay: false,
+    helpTooltip: undefined,
+    navAriaLabel: 'Blue navbar',
+    profileMenuOptions: {
+      avatarUrl: workingAvatarUrl,
+      email: 'modus_user@trimble.com',
+      initials: 'MU',
+      signOutText: 'Sign out',
+      username: 'Modus User',
+    },
+    searchTooltip: undefined,
+    showHelp: false,
+    showProfile: true,
+    showSearch: false,
+    notificationCount: 0,
   },
-  searchTooltip: undefined,
-  showHelp: false,
-  showProfile: true,
-  showSearch: false,
-  notificationCount: 0,
 };
 
 const items = [
@@ -367,36 +376,39 @@ const WithOptionalFeaturesTemplate = ({
   </modus-navbar>
 `;
 
-export const WithOptionalFeatures = WithOptionalFeaturesTemplate.bind({});
-WithOptionalFeatures.args = {
-  enableSearchOverlay: false,
-  helpTooltip: undefined,
-  navAriaLabel: 'Default',
-  profileMenuOptions: {
-    avatarUrl: workingAvatarUrl,
-    email: 'modus_user@trimble.com',
-    initials: 'MU',
-    signOutText: 'Sign out',
-    username: 'Modus User',
-    links: [
-      {
-        id: 'link1',
-        display: 'Link 1',
-        icon: 'moon',
+export const WithOptionalFeatures = {
+  render: WithOptionalFeaturesTemplate,
+
+  args: {
+    enableSearchOverlay: false,
+    helpTooltip: undefined,
+    navAriaLabel: 'Default',
+    profileMenuOptions: {
+      avatarUrl: workingAvatarUrl,
+      email: 'modus_user@trimble.com',
+      initials: 'MU',
+      signOutText: 'Sign out',
+      username: 'Modus User',
+      links: [
+        {
+          id: 'link1',
+          display: 'Link 1',
+          icon: 'moon',
+        },
+        {
+          id: 'link2',
+          display: 'Link 2',
+          icon: 'sun',
+        },
+      ],
+      tooltip: {
+        text: 'User Profile Menu',
       },
-      {
-        id: 'link2',
-        display: 'Link 2',
-        icon: 'sun',
-      },
-    ],
-    tooltip: {
-      text: 'User Profile Menu',
     },
+    searchTooltip: undefined,
+    showHelp: false,
+    showProfile: true,
+    showSearch: false,
+    notificationCount: 0,
   },
-  searchTooltip: undefined,
-  showHelp: false,
-  showProfile: true,
-  showSearch: false,
-  notificationCount: 0,
 };

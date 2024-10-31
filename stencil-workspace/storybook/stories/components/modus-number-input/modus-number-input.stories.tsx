@@ -191,23 +191,26 @@ const Template = ({
     value=${value}></modus-number-input>
 `;
 
-export const Default = Template.bind({});
-Default.args = {
-  ariaLabel: '',
-  currency: '',
-  locale: '',
-  disabled: false,
-  errorText: '',
-  helperText: '',
-  label: 'Number Input',
-  maxValue: 100000,
-  minValue: 0,
-  placeholder: '',
-  readOnly: false,
-  required: false,
-  size: 'medium',
-  step: 1,
-  textAlign: 'left',
-  validText: '',
-  value: 100000,
+export const Default = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    currency: '',
+    locale: '',
+    disabled: false,
+    errorText: '',
+    helperText: '',
+    label: 'Number Input',
+    maxValue: 100000,
+    minValue: 0,
+    placeholder: '',
+    readOnly: false,
+    required: false,
+    size: 'medium',
+    step: 1,
+    textAlign: 'left',
+    validText: '',
+    value: 100000,
+  },
 };

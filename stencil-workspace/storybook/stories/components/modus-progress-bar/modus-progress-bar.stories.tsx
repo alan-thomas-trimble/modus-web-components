@@ -111,58 +111,70 @@ const Template = ({ ariaLabel, backgroundColor, color, maxValue, minValue, mode,
   </modus-progress-bar>
 `;
 
-export const Default = Template.bind({});
-Default.args = {
-  ariaLabel: 'progress bar',
-  backgroundColor: '',
-  color: '',
-  maxValue: 100,
-  mode: 'determinate',
-  minValue: 0,
-  size: 'default',
-  text: 'Some progress!',
-  textColor: '',
-  value: 50,
+export const Default = {
+  render: Template,
+
+  args: {
+    ariaLabel: 'progress bar',
+    backgroundColor: '',
+    color: '',
+    maxValue: 100,
+    mode: 'determinate',
+    minValue: 0,
+    size: 'default',
+    text: 'Some progress!',
+    textColor: '',
+    value: 50,
+  },
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  ariaLabel: 'progress bar',
-  backgroundColor: '',
-  color: '',
-  maxValue: 100,
-  mode: 'determinate',
-  minValue: 0,
-  size: 'small',
-  text: '',
-  textColor: '',
-  value: 50,
+export const Small = {
+  render: Template,
+
+  args: {
+    ariaLabel: 'progress bar',
+    backgroundColor: '',
+    color: '',
+    maxValue: 100,
+    mode: 'determinate',
+    minValue: 0,
+    size: 'small',
+    text: '',
+    textColor: '',
+    value: 50,
+  },
 };
 
-export const Compact = Template.bind({});
-Compact.args = {
-  ariaLabel: 'progress bar',
-  backgroundColor: '',
-  color: '',
-  maxValue: 100,
-  mode: 'determinate',
-  minValue: 0,
-  size: 'compact',
-  text: '',
-  textColor: '',
-  value: 50,
+export const Compact = {
+  render: Template,
+
+  args: {
+    ariaLabel: 'progress bar',
+    backgroundColor: '',
+    color: '',
+    maxValue: 100,
+    mode: 'determinate',
+    minValue: 0,
+    size: 'compact',
+    text: '',
+    textColor: '',
+    value: 50,
+  },
 };
 
-export const Indeterminate = Template.bind({});
-Indeterminate.args = {
-  ariaLabel: 'progress bar',
-  backgroundColor: '',
-  color: '',
-  maxValue: 100,
-  mode: 'indeterminate',
-  minValue: 0,
-  size: 'default',
-  text: 'Indeterminate progress!',
-  textColor: '',
-  value: 50,
+export const Indeterminate = {
+  render: Template,
+
+  args: {
+    ariaLabel: 'progress bar',
+    backgroundColor: '',
+    color: '',
+    maxValue: 100,
+    mode: 'indeterminate',
+    minValue: 0,
+    size: 'default',
+    text: 'Indeterminate progress!',
+    textColor: '',
+    value: 50,
+  },
 };

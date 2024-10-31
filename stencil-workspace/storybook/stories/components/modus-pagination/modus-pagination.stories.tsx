@@ -78,97 +78,101 @@ export default {
   },
 };
 
-export const Default = ({ activePage, ariaLabel, maxPage, minPage, prevPageButtonText, nextPageButtonText, size }) => html`
-  <modus-pagination
-    active-page=${activePage}
-    aria-label=${ariaLabel}
-    max-page=${maxPage}
-    min-page=${minPage}
-    prev-page-button-text=${prevPageButtonText}
-    next-page-button-text=${nextPageButtonText}
-    size=${size}>
-    Default
-  </modus-pagination>
-`;
-Default.args = {
-  activePage: '4',
-  ariaLabel: '',
-  maxPage: '100',
-  minPage: '1',
-  prevPageButtonText: '',
-  nextPageButtonText: '',
-  size: 'medium',
+export const Default = {
+  render: ({ activePage, ariaLabel, maxPage, minPage, prevPageButtonText, nextPageButtonText, size }) => html`
+    <modus-pagination
+      active-page=${activePage}
+      aria-label=${ariaLabel}
+      max-page=${maxPage}
+      min-page=${minPage}
+      prev-page-button-text=${prevPageButtonText}
+      next-page-button-text=${nextPageButtonText}
+      size=${size}>
+      Default
+    </modus-pagination>
+  `,
+
+  args: {
+    activePage: '4',
+    ariaLabel: '',
+    maxPage: '100',
+    minPage: '1',
+    prevPageButtonText: '',
+    nextPageButtonText: '',
+    size: 'medium',
+  },
 };
 
-export const Large = ({ activePage, ariaLabel, maxPage, minPage, prevPageButtonText, nextPageButtonText, size }) => html`
-  <modus-pagination
-    active-page=${activePage}
-    aria-label=${ariaLabel}
-    max-page=${maxPage}
-    min-page=${minPage}
-    prev-page-button-text=${prevPageButtonText}
-    next-page-button-text=${nextPageButtonText}
-    size=${size}>
-    Large
-  </modus-pagination>
-`;
-Large.args = {
-  activePage: '4',
-  ariaLabel: '',
-  maxPage: '100',
-  minPage: '1',
-  prevPageButtonText: '',
-  nextPageButtonText: '',
-  size: 'large',
+export const Large = {
+  render: ({ activePage, ariaLabel, maxPage, minPage, prevPageButtonText, nextPageButtonText, size }) => html`
+    <modus-pagination
+      active-page=${activePage}
+      aria-label=${ariaLabel}
+      max-page=${maxPage}
+      min-page=${minPage}
+      prev-page-button-text=${prevPageButtonText}
+      next-page-button-text=${nextPageButtonText}
+      size=${size}>
+      Large
+    </modus-pagination>
+  `,
+
+  args: {
+    activePage: '4',
+    ariaLabel: '',
+    maxPage: '100',
+    minPage: '1',
+    prevPageButtonText: '',
+    nextPageButtonText: '',
+    size: 'large',
+  },
 };
 
-export const Small = ({ activePage, ariaLabel, maxPage, minPage, prevPageButtonText, nextPageButtonText, size }) => html`
-  <modus-pagination
-    active-page=${activePage}
-    aria-label=${ariaLabel}
-    max-page=${maxPage}
-    min-page=${minPage}
-    prev-page-button-text=${prevPageButtonText}
-    next-page-button-text=${nextPageButtonText}
-    size=${size}>
-    Small
-  </modus-pagination>
-`;
-Small.args = {
-  activePage: '4',
-  ariaLabel: '',
-  maxPage: '100',
-  minPage: '1',
-  prevPageButtonText: '',
-  nextPageButtonText: '',
-  size: 'small',
+export const Small = {
+  render: ({ activePage, ariaLabel, maxPage, minPage, prevPageButtonText, nextPageButtonText, size }) => html`
+    <modus-pagination
+      active-page=${activePage}
+      aria-label=${ariaLabel}
+      max-page=${maxPage}
+      min-page=${minPage}
+      prev-page-button-text=${prevPageButtonText}
+      next-page-button-text=${nextPageButtonText}
+      size=${size}>
+      Small
+    </modus-pagination>
+  `,
+
+  args: {
+    activePage: '4',
+    ariaLabel: '',
+    maxPage: '100',
+    minPage: '1',
+    prevPageButtonText: '',
+    nextPageButtonText: '',
+    size: 'small',
+  },
 };
 
-export const PrevNextTextButton = ({
-  activePage,
-  ariaLabel,
-  maxPage,
-  minPage,
-  prevPageButtonText,
-  nextPageButtonText,
-  size,
-}) => html`
-  <modus-pagination
-    active-page=${activePage}
-    aria-label=${ariaLabel}
-    max-page=${maxPage}
-    min-page=${minPage}
-    prev-page-button-text=${prevPageButtonText}
-    next-page-button-text=${nextPageButtonText}
-    size=${size}>
-  </modus-pagination>
-`;
-PrevNextTextButton.args = {
-  activePage: '4',
-  ariaLabel: '',
-  maxPage: '100',
-  minPage: '1',
-  prevPageButtonText: 'Prev',
-  nextPageButtonText: 'Next',
-  size: 'medium',
+export const PrevNextTextButton = {
+  render: ({ activePage, ariaLabel, maxPage, minPage, prevPageButtonText, nextPageButtonText, size }) => html`
+    <modus-pagination
+      active-page=${activePage}
+      aria-label=${ariaLabel}
+      max-page=${maxPage}
+      min-page=${minPage}
+      prev-page-button-text=${prevPageButtonText}
+      next-page-button-text=${nextPageButtonText}
+      size=${size}>
+    </modus-pagination>
+  `,
+
+  args: {
+    activePage: '4',
+    ariaLabel: '',
+    maxPage: '100',
+    minPage: '1',
+    prevPageButtonText: 'Prev',
+    nextPageButtonText: 'Next',
+    size: 'medium',
+  },
 };

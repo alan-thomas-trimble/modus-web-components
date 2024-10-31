@@ -202,37 +202,48 @@ const defaultArgs = {
   value: '23:39',
 };
 
-export const Default = Template.bind({});
-Default.args = defaultArgs;
-
-export const TimeFormat = Template.bind({});
-TimeFormat.args = {
-  ...defaultArgs,
-  ...{ ampm: 'true', helperText: 'hh:mm AM/PM', placeholder: '12:00 AM' },
+export const Default = {
+  render: Template,
+  args: defaultArgs,
 };
 
-export const AutoFormat = Template.bind({});
-AutoFormat.args = {
-  ...defaultArgs,
-  ...{
-    ampm: true,
-    value: '',
-    helperText: 'hh:mm AM/PM',
-    autoFormat: true,
-    placeholder: '12:00 AM',
+export const TimeFormat = {
+  render: Template,
+
+  args: {
+    ...defaultArgs,
+    ...{ ampm: 'true', helperText: 'hh:mm AM/PM', placeholder: '12:00 AM' },
   },
 };
 
-export const MinAndMax = Template.bind({});
-MinAndMax.args = {
-  ...defaultArgs,
-  ...{
-    min: '14:00',
-    max: '20:00',
-    helperText: 'hh:mm (min=14:00 to max=20:00)',
-    value: '14:00',
-    placeholder: '14:00',
-    autoFormat: true,
+export const AutoFormat = {
+  render: Template,
+
+  args: {
+    ...defaultArgs,
+    ...{
+      ampm: true,
+      value: '',
+      helperText: 'hh:mm AM/PM',
+      autoFormat: true,
+      placeholder: '12:00 AM',
+    },
+  },
+};
+
+export const MinAndMax = {
+  render: Template,
+
+  args: {
+    ...defaultArgs,
+    ...{
+      min: '14:00',
+      max: '20:00',
+      helperText: 'hh:mm (min=14:00 to max=20:00)',
+      value: '14:00',
+      placeholder: '14:00',
+      autoFormat: true,
+    },
   },
 };
 
@@ -293,5 +304,8 @@ const setSelects = () => {
 
   return tag;
 };
-export const WithTimeZone = WithTimeZoneTemplate.bind({});
-WithTimeZone.args = { ...defaultArgs, autoFormat: true };
+
+export const WithTimeZone = {
+  render: WithTimeZoneTemplate,
+  args: { ...defaultArgs, autoFormat: true },
+};

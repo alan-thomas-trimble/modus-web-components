@@ -43,7 +43,9 @@ const Template = () => html`
   ${setSelects()}
 `;
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template,
+};
 
 const setSelects = () => {
   const tag = document.createElement('script');

@@ -136,11 +136,18 @@ const DefaultArgs = {
   color: 'primary',
   buttonStyle: 'outline',
 };
-export const Default = DefaultTemplate.bind({});
-Default.args = { ...DefaultArgs };
 
-export const SingleSelection = SingleSelectionTemplate.bind({});
-SingleSelection.args = { ...DefaultArgs, selectionType: 'single' };
+export const Default = {
+  render: DefaultTemplate,
+  args: { ...DefaultArgs },
+};
 
-export const MultipleSelection = MultipleSelectionTemplate.bind({});
-MultipleSelection.args = { ...DefaultArgs, selectionType: 'multiple' };
+export const SingleSelection = {
+  render: SingleSelectionTemplate,
+  args: { ...DefaultArgs, selectionType: 'single' },
+};
+
+export const MultipleSelection = {
+  render: MultipleSelectionTemplate,
+  args: { ...DefaultArgs, selectionType: 'multiple' },
+};

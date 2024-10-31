@@ -56,13 +56,17 @@ const Template = ({ ariaLabel, disabled, name, size }) => html`
   ${setRadioGroup()}
 `;
 
-export const Default = Template.bind({});
-Default.args = {
-  ariaLabel: '',
-  disabled: false,
-  name: '',
-  size: 'medium',
+export const Default = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    disabled: false,
+    name: '',
+    size: 'medium',
+  },
 };
+
 const setRadioGroup = () => {
   const tag = document.createElement('script');
   tag.innerHTML = `

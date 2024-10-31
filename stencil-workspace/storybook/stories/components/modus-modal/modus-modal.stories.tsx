@@ -138,20 +138,24 @@ const Template = ({
   </modus-modal>
   ${setScript()}
 `;
-export const Default = Template.bind({});
-Default.args = {
-  ariaLabel: '',
-  headerText: 'Modal title',
-  primaryButtonAriaLabel: 'Save changes',
-  primaryButtonDisabled: false,
-  primaryButtonText: 'Save changes',
-  secondaryButtonAriaLabel: 'Sweet',
-  secondaryButtonDisabled: false,
-  secondaryButtonText: 'Sweet',
-  zIndex: '1',
-  backdrop: 'default',
-  fullscreen: false,
-  showFullscreenToggle: false,
+
+export const Default = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    headerText: 'Modal title',
+    primaryButtonAriaLabel: 'Save changes',
+    primaryButtonDisabled: false,
+    primaryButtonText: 'Save changes',
+    secondaryButtonAriaLabel: 'Sweet',
+    secondaryButtonDisabled: false,
+    secondaryButtonText: 'Sweet',
+    zIndex: '1',
+    backdrop: 'default',
+    fullscreen: false,
+    showFullscreenToggle: false,
+  },
 };
 
 const CustomFooterTemplate = ({ ariaLabel, headerText, zIndex, backdrop, fullscreen, showFullscreenToggle }) => html`
@@ -179,14 +183,18 @@ const CustomFooterTemplate = ({ ariaLabel, headerText, zIndex, backdrop, fullscr
   </modus-modal>
   ${setScript()}
 `;
-export const CustomFooter = CustomFooterTemplate.bind({});
-CustomFooter.args = {
-  ariaLabel: '',
-  headerText: 'Modal title',
-  zIndex: '1',
-  backdrop: 'default',
-  fullscreen: false,
-  showFullscreenToggle: false,
+
+export const CustomFooter = {
+  render: CustomFooterTemplate,
+
+  args: {
+    ariaLabel: '',
+    headerText: 'Modal title',
+    zIndex: '1',
+    backdrop: 'default',
+    fullscreen: false,
+    showFullscreenToggle: false,
+  },
 };
 
 const setScript = () => {

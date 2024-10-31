@@ -96,32 +96,34 @@ const DefaultTemplate = ({ ariaLabel, expanded, targetContent, pushContent }) =>
   `;
 };
 
-export const Default = DefaultTemplate.bind({});
+export const Default = {
+  render: DefaultTemplate,
 
-Default.args = {
-  ariaLabel: 'Utility Panel',
-  expanded: false,
-  pushContent: true,
-  targetContent: '#panelcontent',
-};
-
-Default.decorators = [
-  (Story) => {
-    useEffect(() => {
-      const handleHelpOpen = () => {
-        const panel = document.querySelector('modus-utility-panel');
-        if (panel) {
-          const isExpanded = panel.getAttribute('expanded') === 'true';
-          panel.setAttribute('expanded', (!isExpanded).toString());
-        }
-      };
-      document.addEventListener('buttonClick', handleHelpOpen);
-
-      return () => {
-        document.removeEventListener('buttonClick', handleHelpOpen);
-      };
-    }, []);
-
-    return Story();
+  args: {
+    ariaLabel: 'Utility Panel',
+    expanded: false,
+    pushContent: true,
+    targetContent: '#panelcontent',
   },
-];
+
+  decorators: [
+    (Story) => {
+      useEffect(() => {
+        const handleHelpOpen = () => {
+          const panel = document.querySelector('modus-utility-panel');
+          if (panel) {
+            const isExpanded = panel.getAttribute('expanded') === 'true';
+            panel.setAttribute('expanded', (!isExpanded).toString());
+          }
+        };
+        document.addEventListener('buttonClick', handleHelpOpen);
+
+        return () => {
+          document.removeEventListener('buttonClick', handleHelpOpen);
+        };
+      }, []);
+
+      return Story();
+    },
+  ],
+};

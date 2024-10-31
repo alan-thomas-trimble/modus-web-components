@@ -251,13 +251,16 @@ const DefaultTemplate = ({
     value=${value}></modus-date-input>
 `;
 
-export const Default = DefaultTemplate.bind({});
-Default.args = {
-  ...defaultArgs,
-  format: 'mmm dd, yyyy',
-  allowedCharsRegex: '.',
-  helperText: 'mmm dd, yyyy',
-  ...{ label: 'Single Date' },
+export const Default = {
+  render: DefaultTemplate,
+
+  args: {
+    ...defaultArgs,
+    format: 'mmm dd, yyyy',
+    allowedCharsRegex: '.',
+    helperText: 'mmm dd, yyyy',
+    ...{ label: 'Single Date' },
+  },
 };
 
 const DateRangeTemplate = ({
@@ -327,14 +330,18 @@ const DateRangeTemplate = ({
       value=${value}></modus-date-input>
   </modus-date-picker>
 `;
-export const DateRange = DateRangeTemplate.bind({});
-DateRange.args = {
-  ...defaultArgs,
-  ...{
-    showCalendarIcon: true,
-    format: 'dd-mm-yyyy',
-    helperText: 'dd-mm-yyyy',
-    allowedCharsRegex: '[\\d-]',
+
+export const DateRange = {
+  render: DateRangeTemplate,
+
+  args: {
+    ...defaultArgs,
+    ...{
+      showCalendarIcon: true,
+      format: 'dd-mm-yyyy',
+      helperText: 'dd-mm-yyyy',
+      allowedCharsRegex: '[\\d-]',
+    },
   },
 };
 
@@ -384,15 +391,18 @@ const DefaultWithPickerTemplate = ({
   </modus-date-picker>
 `;
 
-export const DefaultWithPicker = DefaultWithPickerTemplate.bind({});
-DefaultWithPicker.args = {
-  ...defaultArgs,
-  position: 'bottom-start',
-  showCalendarIcon: true,
-  min: '2022-12-02',
-  max: '2022-12-30',
-  format: 'mmm dd, yyyy',
-  allowedCharsRegex: '.',
-  helperText: 'mmm dd, yyyy',
-  label: 'Single Date',
+export const DefaultWithPicker = {
+  render: DefaultWithPickerTemplate,
+
+  args: {
+    ...defaultArgs,
+    position: 'bottom-start',
+    showCalendarIcon: true,
+    min: '2022-12-02',
+    max: '2022-12-30',
+    format: 'mmm dd, yyyy',
+    allowedCharsRegex: '.',
+    helperText: 'mmm dd, yyyy',
+    label: 'Single Date',
+  },
 };

@@ -156,30 +156,39 @@ const SlotIconTemplate = ({
   </modus-tree-view>
 `;
 
-export const Default = Template.bind({});
-Default.args = {
-  borderless: false,
-  enableReordering: false,
-  checkboxSelection: false,
-  disableTabbing: false,
-  multiCheckboxSelection: false,
-  multiSelection: false,
-  size: 'standard',
+export const Default = {
+  render: Template,
+
+  args: {
+    borderless: false,
+    enableReordering: false,
+    checkboxSelection: false,
+    disableTabbing: false,
+    multiCheckboxSelection: false,
+    multiSelection: false,
+    size: 'standard',
+  },
 };
 
-export const WithIcon = SlotIconTemplate.bind({});
-WithIcon.args = { ...Default.args };
+export const WithIcon = {
+  render: SlotIconTemplate,
+  args: { ...Default.args },
+};
 
-// export const Borderless = Template.bind({});
+export const Condensed = {
+  render: Template,
+  args: { ...Default.args, checkboxSelection: true, size: 'condensed' },
+};
 
-export const Condensed = Template.bind({});
-Condensed.args = { ...Default.args, checkboxSelection: true, size: 'condensed' };
+export const Borderless = {
+  render: Template,
+  args: { ...Default.args, borderless: true },
+};
 
-export const Borderless = Template.bind({});
-Borderless.args = { ...Default.args, borderless: true };
-
-export const MultiSelection = Template.bind({});
-MultiSelection.args = { ...Default.args, multiSelection: true, checkboxSelection: true, multiCheckboxSelection: true };
+export const MultiSelection = {
+  render: Template,
+  args: { ...Default.args, multiSelection: true, checkboxSelection: true, multiCheckboxSelection: true },
+};
 
 const ActionBarTemplate = ({
   borderless,
@@ -428,8 +437,10 @@ const ActionBarScript = () => {
   return tag;
 };
 
-export const CustomActionBar = ActionBarTemplate.bind({});
-CustomActionBar.args = { ...Default.args };
+export const CustomActionBar = {
+  render: ActionBarTemplate,
+  args: { ...Default.args },
+};
 
 const FilterTemplate = ({
   borderless,
@@ -553,8 +564,10 @@ const FilterScript = () => {
   return tag;
 };
 
-export const CustomFilter = FilterTemplate.bind({});
-CustomFilter.args = { ...Default.args };
+export const CustomFilter = {
+  render: FilterTemplate,
+  args: { ...Default.args },
+};
 
 const WithItemActionBarTemplate = ({
   borderless,
@@ -582,13 +595,16 @@ const WithItemActionBarTemplate = ({
   </div>
 `;
 
-export const WithActionBar = WithItemActionBarTemplate.bind({});
-WithActionBar.args = {
-  ...Default.args,
-  rowActions: [
-    { id: 'export', icon: 'export', label: 'Export' },
-    { id: 'history', icon: 'history', label: 'History' },
-    { id: 'edit', icon: 'pencil', label: 'Edit' },
-    { id: 'delete', icon: 'delete', label: 'Delete' },
-  ],
+export const WithActionBar = {
+  render: WithItemActionBarTemplate,
+
+  args: {
+    ...Default.args,
+    rowActions: [
+      { id: 'export', icon: 'export', label: 'Export' },
+      { id: 'history', icon: 'history', label: 'History' },
+      { id: 'edit', icon: 'pencil', label: 'Edit' },
+      { id: 'delete', icon: 'delete', label: 'Delete' },
+    ],
+  },
 };

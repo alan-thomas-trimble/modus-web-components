@@ -67,11 +67,17 @@ const CircleArrowTemplateArgs = {
   icon: '',
 };
 
-export const Default = Template.bind({});
-Default.args = DefaultTemplateArgs;
+export const Default = {
+  render: Template,
+  args: DefaultTemplateArgs,
+};
 
-export const WithIcon = Template.bind({});
-WithIcon.args = WithIconTemplateArgs;
+export const WithIcon = {
+  render: Template,
+  args: WithIconTemplateArgs,
+};
 
-export const CircleArrow = Template.bind({});
-CircleArrow.args = CircleArrowTemplateArgs;
+export const CircleArrow = {
+  render: Template,
+  args: CircleArrowTemplateArgs,
+};

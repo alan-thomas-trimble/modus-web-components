@@ -146,36 +146,53 @@ const DefaultTemplateArgs = {
   label: 'Default',
 };
 
-export const Default = DefaultTemplate.bind({});
-Default.args = { ...DefaultTemplateArgs };
-
-export const Borderless = DefaultTemplate.bind({});
-Borderless.args = { ...DefaultTemplateArgs, buttonStyle: 'borderless', label: 'Borderless' };
-
-export const Outline = DefaultTemplate.bind({});
-Outline.args = { ...DefaultTemplateArgs, buttonStyle: 'outline', label: 'Outline' };
-
-export const IconWithText = DefaultTemplate.bind({});
-IconWithText.args = { ...DefaultTemplateArgs, label: 'Default', leftIcon: 'notifications' };
-
-export const IconOnly = DefaultTemplate.bind({});
-IconOnly.args = {
-  ...DefaultTemplateArgs,
-  ariaLabel: 'Notifications',
-  ariaDisabled: false,
-  label: '',
-  buttonStyle: 'borderless',
-  color: 'secondary',
-  size: 'large',
-  iconOnly: 'notifications',
-  showCaret: false,
+export const Default = {
+  render: DefaultTemplate,
+  args: { ...DefaultTemplateArgs },
 };
 
-export const WithCaret = DefaultTemplate.bind({});
-WithCaret.args = { ...DefaultTemplateArgs, label: 'Primary', color: 'primary', disabled: false, showCaret: true };
+export const Borderless = {
+  render: DefaultTemplate,
+  args: { ...DefaultTemplateArgs, buttonStyle: 'borderless', label: 'Borderless' },
+};
 
-export const SpecialButton = DefaultTemplate.bind({});
-SpecialButton.args = { ...DefaultTemplateArgs, label: 'Button', color: 'special' };
+export const Outline = {
+  render: DefaultTemplate,
+  args: { ...DefaultTemplateArgs, buttonStyle: 'outline', label: 'Outline' },
+};
 
-export const DangerButton = DefaultTemplate.bind({});
-DangerButton.args = { ...DefaultTemplateArgs, label: 'Danger', color: 'danger' };
+export const IconWithText = {
+  render: DefaultTemplate,
+  args: { ...DefaultTemplateArgs, label: 'Default', leftIcon: 'notifications' },
+};
+
+export const IconOnly = {
+  render: DefaultTemplate,
+
+  args: {
+    ...DefaultTemplateArgs,
+    ariaLabel: 'Notifications',
+    ariaDisabled: false,
+    label: '',
+    buttonStyle: 'borderless',
+    color: 'secondary',
+    size: 'large',
+    iconOnly: 'notifications',
+    showCaret: false,
+  },
+};
+
+export const WithCaret = {
+  render: DefaultTemplate,
+  args: { ...DefaultTemplateArgs, label: 'Primary', color: 'primary', disabled: false, showCaret: true },
+};
+
+export const SpecialButton = {
+  render: DefaultTemplate,
+  args: { ...DefaultTemplateArgs, label: 'Button', color: 'special' },
+};
+
+export const DangerButton = {
+  render: DefaultTemplate,
+  args: { ...DefaultTemplateArgs, label: 'Danger', color: 'danger' },
+};

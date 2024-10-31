@@ -58,35 +58,47 @@ export default {
   },
 };
 
-export const Medium = ({ ariaLabel, checked, disabled, label, size }) => html`
-  <modus-switch aria-label=${ariaLabel} checked=${checked} ?disabled=${disabled} label=${label} size=${size}> </modus-switch>
-`;
-Medium.args = {
-  ariaLabel: '',
-  checked: false,
-  disabled: false,
-  label: 'Medium',
-  size: 'medium',
+export const Medium = {
+  render: ({ ariaLabel, checked, disabled, label, size }) => html`
+    <modus-switch aria-label=${ariaLabel} checked=${checked} ?disabled=${disabled} label=${label} size=${size}>
+    </modus-switch>
+  `,
+
+  args: {
+    ariaLabel: '',
+    checked: false,
+    disabled: false,
+    label: 'Medium',
+    size: 'medium',
+  },
 };
 
-export const Checked = ({ ariaLabel, checked, disabled, label, size }) => html`
-  <modus-switch aria-label=${ariaLabel} checked=${checked} ?disabled=${disabled} label=${label} size=${size}> </modus-switch>
-`;
-Checked.args = {
-  ariaLabel: '',
-  checked: true,
-  disabled: false,
-  label: 'Checked',
-  size: 'medium',
+export const Checked = {
+  render: ({ ariaLabel, checked, disabled, label, size }) => html`
+    <modus-switch aria-label=${ariaLabel} checked=${checked} ?disabled=${disabled} label=${label} size=${size}>
+    </modus-switch>
+  `,
+
+  args: {
+    ariaLabel: '',
+    checked: true,
+    disabled: false,
+    label: 'Checked',
+    size: 'medium',
+  },
 };
 
-export const Disabled = ({ ariaLabel, checked, disabled, label, size }) => html`
-  <modus-switch aria-label=${ariaLabel} checked=${checked} ?disabled=${disabled} label=${label} size=${size}> </modus-switch>
-`;
-Disabled.args = {
-  ariaLabel: '',
-  checked: false,
-  disabled: true,
-  label: 'Disabled',
-  size: 'medium',
+export const Disabled = {
+  render: ({ ariaLabel, checked, disabled, label, size }) => html`
+    <modus-switch aria-label=${ariaLabel} checked=${checked} ?disabled=${disabled} label=${label} size=${size}>
+    </modus-switch>
+  `,
+
+  args: {
+    ariaLabel: '',
+    checked: false,
+    disabled: true,
+    label: 'Disabled',
+    size: 'medium',
+  },
 };

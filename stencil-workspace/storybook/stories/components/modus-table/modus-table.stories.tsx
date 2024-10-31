@@ -690,103 +690,121 @@ const Template = ({
   })}
 `;
 
-export const Default = Template.bind({});
-Default.args = DefaultArgs;
+export const Default = {
+  render: Template,
+  args: DefaultArgs,
+};
 
-export const Hover = Template.bind({});
-Hover.args = { ...DefaultArgs, hover: true };
+export const Hover = {
+  render: Template,
+  args: { ...DefaultArgs, hover: true },
+};
 
-export const Borderless = Template.bind({});
-Borderless.args = {
-  ...DefaultArgs,
-  displayOptions: {
-    borderless: true,
-    cellBorderless: true,
-    cellVerticalBorderless: true,
+export const Borderless = {
+  render: Template,
+
+  args: {
+    ...DefaultArgs,
+    displayOptions: {
+      borderless: true,
+      cellBorderless: true,
+      cellVerticalBorderless: true,
+    },
   },
 };
 
-export const Sorting = Template.bind({});
-Sorting.args = { ...DefaultArgs, sort: true };
+export const Sorting = {
+  render: Template,
+  args: { ...DefaultArgs, sort: true },
+};
 
-export const ManualSorting = Template.bind({});
-ManualSorting.args = {
-  ...DefaultArgs,
-  sort: true,
-  manualSortingOptions: {
-    currentSortingState: [
-      {
-        id: 'first-name',
-        desc: false,
-      },
-    ],
+export const ManualSorting = {
+  render: Template,
+
+  args: {
+    ...DefaultArgs,
+    sort: true,
+    manualSortingOptions: {
+      currentSortingState: [
+        {
+          id: 'first-name',
+          desc: false,
+        },
+      ],
+    },
   },
 };
 
-export const CustomSorting = Template.bind({});
-CustomSorting.args = { ...DefaultArgs, customSort: ['Rejected', 'Verified', 'Pending'], sort: true, data: makeData(5) };
-
-export const ValueFormatter = ({
-  hover,
-  sort,
-  sortIconStyle,
-  columnResize,
-  pagination,
-  showSortIconOnHover,
-  summaryRow,
-  fullWidth,
-  pageSizeList,
-  toolbar,
-  columnReorder,
-  toolbarOptions,
-  displayOptions,
-  maxHeight,
-  maxWidth,
-  rowSelection,
-  rowSelectionOptions,
-  density,
-  wrapText,
-}) => html`
-  <div style="width: 950px">
-    <modus-table
-      hover="${hover}"
-      sort="${sort}"
-      sort="${sortIconStyle}"
-      column-resize="${columnResize}"
-      density="${density}"
-      pagination="${pagination}"
-      show-sort-icon-on-hover="${showSortIconOnHover}"
-      summary-row="${summaryRow}"
-      full-width="${fullWidth}"
-      column-reorder="${columnReorder}"
-      toolbar="${toolbar}"
-      max-height="${maxHeight}"
-      max-width="${maxWidth}"
-      row-selection="${rowSelection}"
-      wrap-text="${wrapText}" />
-  </div>
-  ${valueFormatterTable(pageSizeList, toolbarOptions, displayOptions, rowSelectionOptions)}
-`;
-ValueFormatter.args = {
-  hover: false,
-  sort: false,
-  sortIconStyle: 'alphabetical',
-  columnResize: false,
-  columnReorder: false,
-  pagination: false,
-  showSortIconOnHover: false,
-  summaryRow: false,
-  fullWidth: false,
-  pageSizeList: [7, 10, 20],
-  toolbar: false,
-  toolbarOptions: {},
-  displayOptions: {},
-  maxHeight: '',
-  maxWidth: '',
-  rowSelection: false,
-  rowSelectionOptions: {},
-  wrapText: false,
+export const CustomSorting = {
+  render: Template,
+  args: { ...DefaultArgs, customSort: ['Rejected', 'Verified', 'Pending'], sort: true, data: makeData(5) },
 };
+
+export const ValueFormatter = {
+  render: ({
+    hover,
+    sort,
+    sortIconStyle,
+    columnResize,
+    pagination,
+    showSortIconOnHover,
+    summaryRow,
+    fullWidth,
+    pageSizeList,
+    toolbar,
+    columnReorder,
+    toolbarOptions,
+    displayOptions,
+    maxHeight,
+    maxWidth,
+    rowSelection,
+    rowSelectionOptions,
+    density,
+    wrapText,
+  }) => html`
+    <div style="width: 950px">
+      <modus-table
+        hover="${hover}"
+        sort="${sort}"
+        sort="${sortIconStyle}"
+        column-resize="${columnResize}"
+        density="${density}"
+        pagination="${pagination}"
+        show-sort-icon-on-hover="${showSortIconOnHover}"
+        summary-row="${summaryRow}"
+        full-width="${fullWidth}"
+        column-reorder="${columnReorder}"
+        toolbar="${toolbar}"
+        max-height="${maxHeight}"
+        max-width="${maxWidth}"
+        row-selection="${rowSelection}"
+        wrap-text="${wrapText}" />
+    </div>
+    ${valueFormatterTable(pageSizeList, toolbarOptions, displayOptions, rowSelectionOptions)}
+  `,
+
+  args: {
+    hover: false,
+    sort: false,
+    sortIconStyle: 'alphabetical',
+    columnResize: false,
+    columnReorder: false,
+    pagination: false,
+    showSortIconOnHover: false,
+    summaryRow: false,
+    fullWidth: false,
+    pageSizeList: [7, 10, 20],
+    toolbar: false,
+    toolbarOptions: {},
+    displayOptions: {},
+    maxHeight: '',
+    maxWidth: '',
+    rowSelection: false,
+    rowSelectionOptions: {},
+    wrapText: false,
+  },
+};
+
 const valueFormatterTable = (pageSizeList, toolbarOptions, displayOptions, rowSelectionOptions) => {
   const tag = document.createElement('script');
   tag.innerHTML = `
@@ -801,79 +819,103 @@ const valueFormatterTable = (pageSizeList, toolbarOptions, displayOptions, rowSe
   return tag;
 };
 
-export const Hyperlink = Template.bind({});
-Hyperlink.args = { ...DefaultArgs, columns: DefaultColumns, data: makeData(7) };
+export const Hyperlink = {
+  render: Template,
+  args: { ...DefaultArgs, columns: DefaultColumns, data: makeData(7) },
+};
 
-export const Badge = Template.bind({});
-Badge.args = {
-  ...DefaultArgs,
-  columns: [
-    ...DefaultColumns.slice(0, DefaultColumns.length - 2),
-    {
-      header: 'Priority',
-      accessorKey: 'priority',
-      sortingFn: 'sortForBadge',
-      id: 'priority',
-      dataType: 'badge',
-      maxSize: 100,
+export const Badge = {
+  render: Template,
+
+  args: {
+    ...DefaultArgs,
+    columns: [
+      ...DefaultColumns.slice(0, DefaultColumns.length - 2),
+      {
+        header: 'Priority',
+        accessorKey: 'priority',
+        sortingFn: 'sortForBadge',
+        id: 'priority',
+        dataType: 'badge',
+        maxSize: 100,
+      },
+      ...DefaultColumns.slice(DefaultColumns.length - 1),
+    ],
+    data: makeData(7),
+  },
+};
+
+export const ColumnResize = {
+  render: Template,
+  args: { ...DefaultArgs, columnResize: true },
+};
+
+export const Pagination = {
+  render: Template,
+  args: { ...DefaultArgs, pagination: true, data: makeData(50), pageSizeList: [5, 10, 50] },
+};
+
+export const ManualPagination = {
+  render: Template,
+
+  args: {
+    ...DefaultArgs,
+    pagination: true,
+    data: makeData(50),
+    manualPaginationOptions: {
+      currentPageIndex: 1,
+      currentPageSize: 5,
+      pageCount: 10,
+      totalRecords: 50,
     },
-    ...DefaultColumns.slice(DefaultColumns.length - 1),
-  ],
-  data: makeData(7),
-};
-
-export const ColumnResize = Template.bind({});
-ColumnResize.args = { ...DefaultArgs, columnResize: true };
-
-export const Pagination = Template.bind({});
-Pagination.args = { ...DefaultArgs, pagination: true, data: makeData(50), pageSizeList: [5, 10, 50] };
-
-export const ManualPagination = Template.bind({});
-ManualPagination.args = {
-  ...DefaultArgs,
-  pagination: true,
-  data: makeData(50),
-  manualPaginationOptions: {
-    currentPageIndex: 1,
-    currentPageSize: 5,
-    pageCount: 10,
-    totalRecords: 50,
+    pageSizeList: [5, 10, 50],
   },
-  pageSizeList: [5, 10, 50],
 };
 
-export const SummaryRow = Template.bind({});
-SummaryRow.args = { ...DefaultArgs, summaryRow: true };
+export const SummaryRow = {
+  render: Template,
+  args: { ...DefaultArgs, summaryRow: true },
+};
 
-export const ColumnVisibility = Template.bind({});
-ColumnVisibility.args = {
-  ...DefaultArgs,
-  toolbarOptions: {
-    columnsVisibility: {
-      title: '',
-      requiredColumns: ['age', 'visits'],
-      hiddenColumns: ['progress', 'createdAt'],
+export const ColumnVisibility = {
+  render: Template,
+
+  args: {
+    ...DefaultArgs,
+    toolbarOptions: {
+      columnsVisibility: {
+        title: '',
+        requiredColumns: ['age', 'visits'],
+        hiddenColumns: ['progress', 'createdAt'],
+      },
     },
+    toolbar: true,
   },
-  toolbar: true,
 };
 
-export const ColumnReorder = Template.bind({});
-ColumnReorder.args = { ...DefaultArgs, columnReorder: true };
+export const ColumnReorder = {
+  render: Template,
+  args: { ...DefaultArgs, columnReorder: true },
+};
 
-export const ExpandableRows = Template.bind({});
-ExpandableRows.args = { ...DefaultArgs, rowsExpandable: true, data: makeData(7, 4, 3, 2, 1), fullWidth: true };
+export const ExpandableRows = {
+  render: Template,
+  args: { ...DefaultArgs, rowsExpandable: true, data: makeData(7, 4, 3, 2, 1), fullWidth: true },
+};
 
-export const CheckboxRowSelection = Template.bind({});
-CheckboxRowSelection.args = {
-  ...DefaultArgs,
-  rowSelection: true,
-  rowSelectionOptions: {
-    multiple: true,
-    subRowSelection: true,
-    preSelectedRows: undefined,
+export const CheckboxRowSelection = {
+  render: Template,
+
+  args: {
+    ...DefaultArgs,
+    rowSelection: true,
+    rowSelectionOptions: {
+      multiple: true,
+      subRowSelection: true,
+      preSelectedRows: undefined,
+    },
+    data: makeData(7),
   },
-  data: makeData(7),
 };
 
 const DefaultColumnsWithPriority = [
@@ -948,87 +990,98 @@ const EditableColumns = DefaultColumnsWithPriority.map((col) => {
     };
   } else return { ...col, cellEditable: true };
 });
-export const InlineEditing = Template.bind({});
-InlineEditing.args = { ...DefaultArgs, columns: EditableColumns, data: makeData(7), errors: {}, isInlineEditing: true };
 
-export const LargeDataset = Template.bind({});
+export const InlineEditing = {
+  render: Template,
+  args: { ...DefaultArgs, columns: EditableColumns, data: makeData(7), errors: {}, isInlineEditing: true },
+};
 
-LargeDataset.args = {
-  ...DefaultArgs,
-  columns: EditableColumns,
-  data: makeData(10000, 1, 1),
-  pagination: true,
-  pageSizeList: [5, 10, 50],
-  sort: true,
-  hover: true,
-  rowsExpandable: true,
-  summaryRow: true,
-  columnReorder: true,
-  columnResize: true,
-  toolbar: true,
-  toolbarOptions: {
-    columnsVisibility: {
-      title: '',
-      requiredColumns: ['age', 'visits'],
+export const LargeDataset = {
+  render: Template,
+
+  args: {
+    ...DefaultArgs,
+    columns: EditableColumns,
+    data: makeData(10000, 1, 1),
+    pagination: true,
+    pageSizeList: [5, 10, 50],
+    sort: true,
+    hover: true,
+    rowsExpandable: true,
+    summaryRow: true,
+    columnReorder: true,
+    columnResize: true,
+    toolbar: true,
+    toolbarOptions: {
+      columnsVisibility: {
+        title: '',
+        requiredColumns: ['age', 'visits'],
+      },
     },
-  },
-  rowSelection: true,
-  rowSelectionOptions: {
-    multiple: true,
-    subRowSelection: true,
+    rowSelection: true,
+    rowSelectionOptions: {
+      multiple: true,
+      subRowSelection: true,
+    },
   },
 };
 
-export const RowActions = Template.bind({});
-RowActions.args = {
-  ...DefaultArgs,
-  rowActions: [
-    {
-      id: '1',
-      icon: 'add',
-      label: 'Add',
-      index: 0,
-    },
+export const RowActions = {
+  render: Template,
 
-    {
-      id: '2',
-      icon: 'calendar',
-      label: 'calendar',
-      index: 1,
-    },
+  args: {
+    ...DefaultArgs,
+    rowActions: [
+      {
+        id: '1',
+        icon: 'add',
+        label: 'Add',
+        index: 0,
+      },
 
-    {
-      id: '3',
-      icon: 'cancel',
-      label: 'Cancel',
-      index: 2,
-    },
-    {
-      id: '4',
-      index: 3,
-      icon: 'add',
-      label: 'Add',
-    },
-    {
-      id: '5',
-      index: 4,
-      icon: 'delete',
-      label: 'Delete',
-    },
-  ],
-  data: makeData(7),
-  fullWidth: true,
+      {
+        id: '2',
+        icon: 'calendar',
+        label: 'calendar',
+        index: 1,
+      },
+
+      {
+        id: '3',
+        icon: 'cancel',
+        label: 'Cancel',
+        index: 2,
+      },
+      {
+        id: '4',
+        index: 3,
+        icon: 'add',
+        label: 'Add',
+      },
+      {
+        id: '5',
+        index: 4,
+        icon: 'delete',
+        label: 'Delete',
+      },
+    ],
+    data: makeData(7),
+    fullWidth: true,
+  },
 };
 
-export const WrapText = Template.bind({});
-WrapText.args = {
-  ...DefaultArgs,
-  data: [
-    {
-      ...newPerson(),
-      lastName: 'This is an example of long text',
-    },
-    ...makeData(4),
-  ],
-  wrapText: true,
+export const WrapText = {
+  render: Template,
+
+  args: {
+    ...DefaultArgs,
+    data: [
+      {
+        ...newPerson(),
+        lastName: 'This is an example of long text',
+      },
+      ...makeData(4),
+    ],
+    wrapText: true,
+  },
 };

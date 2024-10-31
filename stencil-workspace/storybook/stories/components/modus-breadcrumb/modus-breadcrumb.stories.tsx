@@ -42,8 +42,13 @@ const defaultCrumbs = [
 const Template = ({ underlineLinks }) => html`
   <modus-breadcrumb underline-links=${underlineLinks} .crumbs=${defaultCrumbs}></modus-breadcrumb>
 `;
-export const Default = Template.bind({});
-Default.args = { underlineLinks: false };
 
-export const Underline = Template.bind({});
-Underline.args = { underlineLinks: true };
+export const Default = {
+  render: Template,
+  args: { underlineLinks: false },
+};
+
+export const Underline = {
+  render: Template,
+  args: { underlineLinks: true },
+};

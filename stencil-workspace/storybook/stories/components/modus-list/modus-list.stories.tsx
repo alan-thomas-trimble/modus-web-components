@@ -44,10 +44,13 @@ const Template = ({ subText, wrapSubText, leftIcon }) => html`
     <modus-list-item disabled>Disabled</modus-list-item>
   </modus-list>
 `;
-export const Default = Template.bind({});
 
-Default.args = {
-  subText: 'default',
-  wrapSubText: true,
-  leftIcon: '',
+export const Default = {
+  render: Template,
+
+  args: {
+    subText: 'default',
+    wrapSubText: true,
+    leftIcon: '',
+  },
 };

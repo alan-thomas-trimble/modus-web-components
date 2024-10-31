@@ -94,57 +94,72 @@ const Template = ({ ariaLabel, dismissible, showIcon, retainElement, role, type,
   >
 `;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  ariaLabel: '',
-  delay: 0,
-  dismissible: false,
-  retainElement: false,
-  role: 'status',
-  showIcon: true,
-  type: 'primary',
+export const Primary = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    delay: 0,
+    dismissible: false,
+    retainElement: false,
+    role: 'status',
+    showIcon: true,
+    type: 'primary',
+  },
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  ariaLabel: '',
-  delay: 0,
-  dismissible: false,
-  retainElement: false,
-  role: 'status',
-  showIcon: true,
-  type: 'secondary',
+export const Secondary = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    delay: 0,
+    dismissible: false,
+    retainElement: false,
+    role: 'status',
+    showIcon: true,
+    type: 'secondary',
+  },
 };
 
-export const Success = Template.bind({});
-Success.args = {
-  ariaLabel: '',
-  delay: 0,
-  dismissible: false,
-  retainElement: false,
-  role: 'status',
-  showIcon: true,
-  type: 'success',
+export const Success = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    delay: 0,
+    dismissible: false,
+    retainElement: false,
+    role: 'status',
+    showIcon: true,
+    type: 'success',
+  },
 };
 
-export const Danger = Template.bind({});
-Danger.args = {
-  ariaLabel: '',
-  delay: 0,
-  dismissible: false,
-  retainElement: false,
-  role: 'status',
-  showIcon: true,
-  type: 'danger',
+export const Danger = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    delay: 0,
+    dismissible: false,
+    retainElement: false,
+    role: 'status',
+    showIcon: true,
+    type: 'danger',
+  },
 };
 
-export const RetainedToast = Template.bind({});
-RetainedToast.args = {
-  ariaLabel: '',
-  delay: 2000,
-  dismissible: false,
-  retainElement: true,
-  role: 'status',
-  showIcon: true,
-  type: 'primary',
+export const RetainedToast = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    delay: 2000,
+    dismissible: false,
+    retainElement: true,
+    role: 'status',
+    showIcon: true,
+    type: 'primary',
+  },
 };

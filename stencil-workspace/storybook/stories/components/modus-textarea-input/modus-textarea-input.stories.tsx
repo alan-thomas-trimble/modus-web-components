@@ -228,27 +228,30 @@ const Template = ({
   </form>
 `;
 
-export const Default = Template.bind({});
-Default.args = {
-  ariaLabel: '',
-  autocorrect: null,
-  autoFocusInput: true,
-  clearable: false,
-  disabled: false,
-  enterkeyhint: undefined,
-  errorText: '',
-  helperText: '',
-  inputmode: '',
-  label: 'Comment',
-  maxLength: 2000,
-  minLength: 0,
-  placeholder: '',
-  readOnly: false,
-  required: false,
-  rows: 3,
-  size: 'medium',
-  spellcheck: false,
-  textAlign: 'left',
-  validText: '',
-  value: '',
+export const Default = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    autocorrect: null,
+    autoFocusInput: true,
+    clearable: false,
+    disabled: false,
+    enterkeyhint: undefined,
+    errorText: '',
+    helperText: '',
+    inputmode: '',
+    label: 'Comment',
+    maxLength: 2000,
+    minLength: 0,
+    placeholder: '',
+    readOnly: false,
+    required: false,
+    rows: 3,
+    size: 'medium',
+    spellcheck: false,
+    textAlign: 'left',
+    validText: '',
+    value: '',
+  },
 };

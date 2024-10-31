@@ -91,14 +91,18 @@ const DefaultTemplate = ({ animateList, ariaLabel, customPlacement, disabled, pl
   </modus-dropdown>
   ${initializeCustomPlacement(customPlacement)}
 `;
-export const Default = DefaultTemplate.bind({});
-Default.args = {
-  animateList: false,
-  ariaLabel: '',
-  customPlacement: { top: 0, right: 0, bottom: 0, left: 0 },
-  disabled: false,
-  placement: 'bottom',
-  showDropdownListBorder: true,
+
+export const Default = {
+  render: DefaultTemplate,
+
+  args: {
+    animateList: false,
+    ariaLabel: '',
+    customPlacement: { top: 0, right: 0, bottom: 0, left: 0 },
+    disabled: false,
+    placement: 'bottom',
+    showDropdownListBorder: true,
+  },
 };
 
 const WithManyItemsTemplate = ({
@@ -132,14 +136,18 @@ const WithManyItemsTemplate = ({
   </modus-dropdown>
   ${initializeCustomPlacement(customPlacement)}
 `;
-export const WithManyItems = WithManyItemsTemplate.bind({});
-WithManyItems.args = {
-  animateList: false,
-  ariaLabel: '',
-  customPlacement: { top: 0, right: 0, bottom: 0, left: 0 },
-  disabled: false,
-  placement: 'bottom',
-  showDropdownListBorder: true,
+
+export const WithManyItems = {
+  render: WithManyItemsTemplate,
+
+  args: {
+    animateList: false,
+    ariaLabel: '',
+    customPlacement: { top: 0, right: 0, bottom: 0, left: 0 },
+    disabled: false,
+    placement: 'bottom',
+    showDropdownListBorder: true,
+  },
 };
 
 function initializeCustomPlacement(customPlacement) {

@@ -48,14 +48,17 @@ export default {
   },
 };
 
-export const Default = ({ ariaLabel, position, text, disabled }) => html`
-  <modus-tooltip aria-label=${ariaLabel} position=${position} text=${text} ?disabled=${disabled}>
-    <modus-button>Button</modus-button>
-  </modus-tooltip>
-`;
-Default.args = {
-  ariaLabel: '',
-  position: 'bottom',
-  text: 'Tooltip text...',
-  disabled: false,
+export const Default = {
+  render: ({ ariaLabel, position, text, disabled }) => html`
+    <modus-tooltip aria-label=${ariaLabel} position=${position} text=${text} ?disabled=${disabled}>
+      <modus-button>Button</modus-button>
+    </modus-tooltip>
+  `,
+
+  args: {
+    ariaLabel: '',
+    position: 'bottom',
+    text: 'Tooltip text...',
+    disabled: false,
+  },
 };

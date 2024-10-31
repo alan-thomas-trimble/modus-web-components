@@ -77,22 +77,28 @@ const Template = ({ ariaLabel, checked, disabled, indeterminate, label, size }) 
     size=${size}></modus-checkbox>
 `;
 
-export const Medium = Template.bind({});
-Medium.args = {
-  ariaLabel: '',
-  checked: false,
-  disabled: false,
-  indeterminate: false,
-  label: 'Checkbox',
-  size: 'medium',
+export const Medium = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    checked: false,
+    disabled: false,
+    indeterminate: false,
+    label: 'Checkbox',
+    size: 'medium',
+  },
 };
 
-export const Indeterminate = Template.bind({});
-Indeterminate.args = {
-  ariaLabel: '',
-  checked: false,
-  disabled: false,
-  indeterminate: true,
-  label: 'Checkbox',
-  size: 'medium',
+export const Indeterminate = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    checked: false,
+    disabled: false,
+    indeterminate: true,
+    label: 'Checkbox',
+    size: 'medium',
+  },
 };

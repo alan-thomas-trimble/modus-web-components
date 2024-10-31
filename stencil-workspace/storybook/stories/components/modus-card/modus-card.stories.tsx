@@ -74,12 +74,16 @@ const Template = ({ ariaLabel, height, width, borderRadius, showCardBorder, show
     </div>
   </modus-card>
 `;
-export const Default = Template.bind({});
-Default.args = {
-  ariaLabel: '',
-  height: '270px',
-  width: '250px',
-  borderRadius: '4px',
-  showCardBorder: true,
-  showShadowOnHover: true,
+
+export const Default = {
+  render: Template,
+
+  args: {
+    ariaLabel: '',
+    height: '270px',
+    width: '250px',
+    borderRadius: '4px',
+    showCardBorder: true,
+    showShadowOnHover: true,
+  },
 };
