@@ -3,14 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o ./dist"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build -o ./dist"
   },
   "dependencies": {
-    "@storybook/addon-docs": "^6.5.16",
-    "@storybook/addons": "^6.5.16",
-    "@storybook/components": "^6.5.16",
-    "@storybook/theming": "^6.5.16",
+    "@storybook/addon-docs": "^8.4.0",
+    "@storybook/components": "^8.4.0",
+    "@storybook/theming": "^8.4.0",
     "@types/mdx": "^2.0.4",
     "lit": "^3.2.1",
     "react": "17.0.2",
@@ -19,15 +18,17 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-react": "^7.24.6",
-    "@storybook/addon-a11y": "^6.5.16",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/addon-styling": "^0.3.2",
-    "@storybook/web-components": "^6.5.16",
+    "@storybook/addon-a11y": "^8.4.0",
+    "@storybook/addon-actions": "^8.4.0",
+    "@storybook/addon-essentials": "^8.4.0",
+    "@storybook/addon-links": "^8.4.0",
+    "@storybook/addon-mdx-gfm": "^8.4.0",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/web-components": "^8.4.0",
+    "@storybook/web-components-webpack5": "^8.4.0",
     "babel-loader": "8.2.5",
     "postcss": "^8.4.31",
-    "storybook-dark-mode": "^3.0.1"
+    "storybook-dark-mode": "^4.0.2"
   },
   "engines": {
     "npm": ">=8.0.0 <9.0.0",
