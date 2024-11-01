@@ -1,11 +1,8 @@
-import React from 'react';
+import { addons } from '@storybook/manager-api';
+import { themes } from '@storybook/theming';
+import '../../dist/modus-web-components/modus-web-components.css';
 import { defineCustomElements } from '../../loader';
 import yourTheme from './your-theme';
-import { themes } from '@storybook/theming';
-import addons from '@storybook/addons';
-import { DocsContainer } from '@storybook/addon-docs';
-import { useDarkMode } from 'storybook-dark-mode';
-import '../../dist/modus-web-components/modus-web-components.css';
 
 defineCustomElements();
 

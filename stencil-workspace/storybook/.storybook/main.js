@@ -1,23 +1,48 @@
-module.exports = {
-  "stories": ["../**/*.mdx", "../**/*.stories.@(js|jsx|ts|tsx)"],
-  "staticDirs": ['../public'],
+import remarkGfm from "remark-gfm";
 
-  "addons": [
+module.exports = {
+  stories: ["../**/*.mdx", "../**/*.stories.@(js|jsx|ts|tsx)"],
+  staticDirs: ['../public'],
+
+  addons: [
     "@storybook/addon-a11y",
-    "@storybook/addon-links",
-    "@storybook/addon-docs",
     "@storybook/addon-essentials",
+    "@storybook/addon-links",
     "storybook-dark-mode",
-    {
-      name: "@storybook/addon-styling",
+    "@storybook/addon-webpack5-compiler-swc",
+    { 
+      name: "@storybook/addon-docs",
       options: {
-        postCss: {
-          implementation: require("postcss"),
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [remarkGfm],
+          },
         },
       },
     },
-    "@storybook/addon-mdx-gfm",
-    "@storybook/addon-webpack5-compiler-swc"
+    {
+      name: "@storybook/addon-styling-webpack",
+      options: {
+        rules: [
+          // Replaces existing CSS rules to support PostCSS
+          {
+            test: /\.css$/,
+            use: [
+              "style-loader",
+              {
+                loader: "css-loader",
+                options: { importLoaders: 1 }
+              },
+              {
+                // Gets options from `postcss.config.js` in your project root
+                loader: "postcss-loader",
+                options: { implementation: require.resolve("postcss") }
+              }
+            ],
+          }
+        ]
+      }
+    }
   ],
 
   babel: async (options) => ({
@@ -25,7 +50,7 @@ module.exports = {
     presets: [...options.presets, '@babel/preset-react'],
   }),
 
-  "framework": {
+  framework: {
     name: "@storybook/web-components-webpack5",
     options: {}
   },
